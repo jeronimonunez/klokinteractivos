@@ -1,0 +1,52 @@
+#splash {
+	width:703px;
+	height:346px;
+	margin:0 auto;
+}
+
+#panelReel {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#panelReel > * {
+	position:relative;
+	display:block;
+	width: 790px;
+	height:560px;
+	}
+
+#activity {
+	width: 790px;
+	height:560px;
+	
+	/*Estas propiedades pueden modificarse si llegase a ser necesario*/	
+	margin:auto;
+	overflow:hidden;
+/*	border:inset #ECB133 3px;*/
+}
+#fondomovil{
+	width: 1580px;
+	height:1400px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-image:url(../../../common/img/fondoe.png);
+	background-repeat:no-repeat;
+	opacity:0;
+}
+.menu{
+	font-size: 11px !important;
+	position: absolute;
+	top: 95px;
+	height: auto;
+	left: 40px;
+	width: 185px;
+	background-color: rgba(255, 153, 51, 0.3);
+	padding: 15px;
+	border-radius: 5px;
+}
+.menu ul{
+	margin-left:20px;
+}

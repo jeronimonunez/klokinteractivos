@@ -1,0 +1,515 @@
+.seccion{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.pantallaCompleta{
+	width: 790px;
+	height: 560px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+}
+
+/* Anemia app */
+
+#anemia-falciforme {
+    width: 790px;
+    height: 560px;
+    overflow: hidden;
+}
+
+.capa-microscopio{
+    position: absolute;
+    top: -120px;
+    left: -420px;
+}
+
+#pantalla-2-image{
+    position: absolute;
+    top: -220px;
+    left: -220px;
+}
+
+#anemia-falciforme .texto {
+    font-family: Trade;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    width: 80%;
+    color: #fff;
+    font-size: 20px;
+}
+
+#anemia-falciforme .texto p {
+    margin-bottom: 20px;
+}
+
+#reproducir-video {
+    position: absolute;
+    bottom: 15%;
+    left: 30%;
+}
+#pantalla-siguiente {
+    position: absolute;
+    bottom: 15%;
+    right: 30%;
+}
+.boton, .boton > img {
+    cursor: pointer !important;
+}
+
+.oculto {
+    display: none;
+}
+.boton-cerrar {
+    background: url(../img/cerrar.png) no-repeat 0 0;
+    display: block;
+    width: 27px;
+    height: 27px;
+    text-indent: -9999px;
+}
+.tabla-grande .boton-cerrar {
+    position: absolute;
+    right: -60px;
+}
+
+#contenedor-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7) url(../img/A/ajax-loader.gif) 50% 50% no-repeat;
+}
+#contenedor-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -280px;
+    margin-top: -160px;
+}
+#contenedor-video .boton-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Pantalla Dos */
+#pantalla2 {
+    width: 790px;
+    height: 560px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#capa-celula-1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 70px;
+    left: 250px;
+}
+#capa-celula-2 {
+    position: absolute;
+    left: 270px;
+    top: 480px;
+}
+
+#capa-celula-3 {
+    position: absolute;
+    left: 270px;
+    top: 0px;
+}
+
+#ejercicio1 {
+    position: absolute;
+    width: 790px;
+    height: 560px;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+}
+
+#attg-imagen {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.titulo-ejercicio {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    font-family: Trade;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.fragmento {
+    background: white;
+    display: block;
+    width: 15px;
+    height: 31px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    margin-right: 3px;
+    float: left;
+}
+.fragmento.draggable,
+.boton-imagen.draggable,
+.circulo-imagen.draggable {
+    cursor: move;
+}
+
+.bloque-respuestas {
+    position: absolute;
+    top: 150px;
+    left: 130px;
+}
+
+.fragmento.respuesta-A {
+    background: url(../img/B/bases_nitrogenada/adenina.png) 0 0 no-repeat;
+}
+.fragmento.respuesta-C {
+    background: url(../img/B/bases_nitrogenada/citosina.png) 0 0 no-repeat;
+}
+.fragmento.respuesta-G {
+    background: url(../img/B/bases_nitrogenada/guanina.png) 0 0 no-repeat;
+}
+.fragmento.respuesta-U {
+    background: url(../img/B/bases_nitrogenada/uracilo.png) 0 0 no-repeat;
+}
+
+.bloque-casillas {
+    position: absolute;
+    top: 220px;
+    left: 120px;
+}
+
+.base-nitrogenada-referencia {
+    position: absolute;
+    left: 60px;
+    top: 310px;
+}
+
+#ejercicio1 .fragmento.draggable.respuesta-A{ position: absolute; top: 356px; left: 80px; }
+#ejercicio1 .fragmento.draggable.respuesta-C{ position: absolute; top: 395px; left: 80px; }
+#ejercicio1 .fragmento.draggable.respuesta-G{ position: absolute; top: 433px; left: 80px; }
+#ejercicio1 .fragmento.draggable.respuesta-U{ position: absolute; top: 468px; left: 80px; }
+
+#ejercicio1.parte2 .fragmento.draggable { display: none; }
+
+
+/* ejercicio 1 parte 2 */
+#ejercicio1-parte2 { position: absolute; top: 0; left: 0; }
+#ejercicio1-parte2 .flecha{ position: absolute; top: 183px; left: 20px; }
+
+.parte2 .bloque-respuestas { left: 30px; }
+.parte2 .bloque-casillas { left: 20px; }
+.parte2 .base-nitrogenada-referencia { display: none; }
+
+#ejercicio1-parte2 .boton-imagen.droppable.doble-cadena { position: absolute; left: 560px; top: 80px; }
+#ejercicio1-parte2 .boton-imagen.droppable.rna-mensajero { position: absolute; top: 149px; left: 590px; }
+#ejercicio1-parte2 .boton-imagen.droppable.transcripcion { top: 188px; position: absolute; left: 400px; }
+#ejercicio1-parte2 .boton-imagen.droppable.cadena-antisentido { position: absolute; top: 228px; left: 590px; }
+
+#ejercicio1-parte2 .texto-acido-nucleico { position: absolute; top: 300px; left: 160px; }
+#ejercicio1-parte2 .boton-imagen.draggable.cadena-antisentido { position: absolute; top: 340px; left: 160px; }
+#ejercicio1-parte2 .boton-imagen.draggable.doble-cadena { position: absolute; left: 160px; top: 390px; }
+#ejercicio1-parte2 .boton-imagen.draggable.rna-mensajero { position: absolute; left: 160px; top: 440px; }
+
+#ejercicio1-parte2 .texto-proceso { position: absolute; top: 302px; left: 380px; }
+#ejercicio1-parte2 .boton-imagen.draggable.replicacion { position: absolute; top: 340px; left: 380px; }
+#ejercicio1-parte2 .boton-imagen.draggable.traduccion { position: absolute; top: 390px; left: 380px; }
+#ejercicio1-parte2 .boton-imagen.draggable.transcripcion { position: absolute; top: 440px; left: 380px; }
+
+#ejercicio1-parte3 {}
+
+.fondo-oscuro { background: rgba(0,0,0,.7); position: absolute; width: 790px; height: 560px; top: 0; left: 0; }
+.fondo-oscuro .ventana {
+    width: 577px; height: 277px;
+    position: absolute; top: 50%; left: 50%; margin-left: -288px; margin-top: -138px;
+    background: #590193; /* Old browsers */
+    background: -moz-linear-gradient(top,  #590193 0%, #3f0066 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#590193), color-stop(100%,#3f0066)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #590193 0%,#3f0066 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #590193 0%,#3f0066 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #590193 0%,#3f0066 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #590193 0%,#3f0066 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#590193', endColorstr='#3f0066',GradientType=0 ); /* IE6-9 */
+    border: 7px solid #54D0B0;
+    box-sizing: border-box;
+    color: white;
+    padding: 28px;
+}
+.fondo-oscuro .ventana h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.ventana .siguiente-ventana img {
+    width: 70px;
+    cursor: pointer;
+}
+.ventana .siguiente-ventana {
+    margin-top: 10px;
+    display: block;
+    float: right;
+    cursor: pointer;
+}
+.ventana ul {
+    margin-left: 10px;
+    list-style: none;
+    margin-top: 10px;
+}
+.ventana ul li {
+    margin-bottom: 5px;
+}
+.ventana ul li input {
+    margin-right: 9px;
+}
+
+/* Pantalla Tres */
+#pantalla3 {
+    width: 790px;
+    height: 560px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#ejercicio2 .fragmento.draggable.respuesta-A{ position: absolute; top: 356px; left: 80px; }
+#ejercicio2 .fragmento.draggable.respuesta-C{ position: absolute; top: 395px; left: 80px; }
+#ejercicio2 .fragmento.draggable.respuesta-G{ position: absolute; top: 433px; left: 80px; }
+#ejercicio2 .fragmento.draggable.respuesta-U{ position: absolute; top: 468px; left: 80px; }
+
+#ejercicio2.parte2 .fragmento.draggable { display: none; }
+
+#ejercicio2 .bloque-casillas { top: 112px; }
+#ejercicio2 .bloque-respuestas { top: 230px; }
+
+#ejercicio2.parte2 .bloque-casillas {
+    left: 120px;
+    top: 50px;
+}
+#ejercicio2.parte2 .flecha {
+    top: 110px;
+}
+#ejercicio2.parte2 .bloque-respuestas {
+    left: 130px;
+    top: 160px;
+}
+#ejercicio2 .flecha {
+    position: absolute;
+    top: 170px;  left: 380px;
+}
+
+
+/* ejercicio 2 parte 2 */
+#ejercicio2-parte2 { position: absolute; top: 0; left: 0; }
+
+.circulos-vacio { width: 543px; height: 94px; background: url(../img/circulos_vacio.png) 0 0 no-repeat; position: absolute; padding-left: 1px; }
+
+#ejercicio2-parte2 .circulos-vacio{
+    top: 183px;
+    left: 127px;
+}
+
+.circulo-imagen.droppable { width: 49px; height: 49px; display: block; }
+
+#ejercicio2-parte2 .circulo-imagen.droppable {float: left; margin-right: 2px;margin-left: 3px;margin-top: 45px;}
+
+.circulo-imagen.droppable.respuesta-glu { background: url(../img/C/circulos/glu.png) 0 0 no-repeat; background-size: contain; }
+.circulo-imagen.droppable.respuesta-his { background: url(../img/C/circulos/his.png) 0 0 no-repeat; background-size: contain; }
+.circulo-imagen.droppable.respuesta-leu { background: url(../img/C/circulos/leu.png) 0 0 no-repeat; background-size: contain; }
+.circulo-imagen.droppable.respuesta-lis { background: url(../img/C/circulos/lis.png) 0 0 no-repeat; background-size: contain; }
+.circulo-imagen.droppable.respuesta-mel { background: url(../img/C/circulos/mel.png) 0 0 no-repeat; background-size: contain; }
+
+.circulo-imagen.droppable.respuesta-met { background: url(../img/C/circulos/met.png) 0 0 no-repeat; background-size: contain; }
+.circulo-imagen.droppable.respuesta-pro { background: url(../img/C/circulos/pro.png) 0 0 no-repeat; background-size: contain; }
+.circulo-imagen.droppable.respuesta-ser { background: url(../img/C/circulos/ser.png) 0 0 no-repeat; background-size: contain; }
+.circulo-imagen.droppable.respuesta-tre { background: url(../img/C/circulos/tre.png) 0 0 no-repeat; background-size: contain; }
+.circulo-imagen.droppable.respuesta-val { background: url(../img/C/circulos/val.png) 0 0 no-repeat; background-size: contain; }
+
+.tabla-grande { position: absolute; background: url(../img/C/tabla_BIG.png) 0 0 no-repeat; width: 488px; height: 449px; top: 60px; left: 170px; box-shadow: 0 0 310px 50px rgba(0,0,0,.9); }
+
+.circulo-imagen.draggable{ width: 45px; height: 45px; display: block;}
+.circulo-imagen.draggable.vacio{ background: url(../img/C/circulos/tabla/hueco_tabla.png) 0 0 no-repeat; }
+
+.circulo-imagen.draggable.respuesta-ala{ background: url(../img/C/circulos/tabla/ala_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-arg{ background: url(../img/C/circulos/tabla/arg_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-asn{ background: url(../img/C/circulos/tabla/asn_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-asp{ background: url(../img/C/circulos/tabla/asp_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-cis{ background: url(../img/C/circulos/tabla/cis_tabla.png) 0 0 no-repeat; }
+
+.circulo-imagen.draggable.respuesta-fen{ background: url(../img/C/circulos/tabla/fen_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-gli{ background: url(../img/C/circulos/tabla/gli_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-gln{ background: url(../img/C/circulos/tabla/gln_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-glu{ background: url(../img/C/circulos/tabla/glu_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-his{ background: url(../img/C/circulos/tabla/his_tabla.png) 0 0 no-repeat; }
+
+.circulo-imagen.draggable.respuesta-ile{ background: url(../img/C/circulos/tabla/ile_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-leu{ background: url(../img/C/circulos/tabla/leu_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-lis{ background: url(../img/C/circulos/tabla/lis_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-met{ background: url(../img/C/circulos/tabla/met_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-pro{ background: url(../img/C/circulos/tabla/pro_tabla.png) 0 0 no-repeat; }
+
+.circulo-imagen.draggable.respuesta-ser{ background: url(../img/C/circulos/tabla/ser_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-tir{ background: url(../img/C/circulos/tabla/tir_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-tre{ background: url(../img/C/circulos/tabla/tre_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-trp{ background: url(../img/C/circulos/tabla/trp_tabla.png) 0 0 no-repeat; }
+.circulo-imagen.draggable.respuesta-val{ background: url(../img/C/circulos/tabla/val_tabla.png) 0 0 no-repeat; }
+
+.circulo-imagen.draggable { position: absolute; }
+
+
+span.circulo-imagen.draggable.respuesta-fen.respuesta-1.ui-draggable {
+left: 106px;
+top: 65px;
+}
+.circulo-imagen-container {top: 60px; left: 170px;position: absolute;}
+.circulo-imagen.draggable.respuesta-fen.respuesta-1 {left: 105px;top: 67px;}
+.circulo-imagen.draggable.respuesta-leu.respuesta-2 {top: 110px;left: 106px;}
+.circulo-imagen.draggable.respuesta-ser.respuesta-3 {left: 194px;top: 86px;}
+.circulo-imagen.draggable.respuesta-tir.respuesta-4 {left: 283px;top: 66px;}
+.circulo-imagen.draggable.respuesta-cis.respuesta-5 {left: 370px;top: 66px;}
+.circulo-imagen.draggable.respuesta-trp.respuesta-6 {top: 123px;left: 383px;}
+.circulo-imagen.draggable.respuesta-leu.respuesta-7 {top: 177px;left: 107px;}
+.circulo-imagen.draggable.respuesta-pro.respuesta-8 {top: 179px;left: 193px;}
+.circulo-imagen.draggable.respuesta-his.respuesta-9 {top: 156px;left: 282px;}
+.circulo-imagen.draggable.respuesta-gln.respuesta-10 {top: 198px;left: 282px;}
+.circulo-imagen.draggable.respuesta-arg.respuesta-11 {top: 178px;left: 370px;}
+.circulo-imagen.draggable.respuesta-ile.respuesta-12 {top: 246px;left: 106px;}
+.circulo-imagen.draggable.respuesta-met.respuesta-13 {top: 290px;left: 107px;}
+.circulo-imagen.draggable.respuesta-tre.respuesta-14 {top: 264px;left: 194px;}
+.circulo-imagen.draggable.respuesta-asn.respuesta-15 {top: 244px;left: 282px;}
+.circulo-imagen.draggable.respuesta-lis.respuesta-16 {top: 287px;left: 283px;}
+.circulo-imagen.draggable.respuesta-ser.respuesta-17 {top: 245px;left: 372px;}
+.circulo-imagen.draggable.respuesta-arg.respuesta-18 {left: 371px;top: 287px;}
+.circulo-imagen.draggable.respuesta-val.respuesta-19 {top: 357px;left: 105px;}
+.circulo-imagen.draggable.respuesta-ala.respuesta-20 {top: 358px;left: 193px;}
+.circulo-imagen.draggable.respuesta-asp.respuesta-21 {top: 334px;left: 283px;}
+.circulo-imagen.draggable.respuesta-glu.respuesta-22 {top: 376px;left: 282px;}
+.circulo-imagen.draggable.respuesta-gli.respuesta-23 {top: 357px;left: 370px;}
+
+.tabla-mini {
+    position: absolute;
+    top: 340px;
+    left: 590px;
+    cursor: pointer;
+}
+
+#ejercicio2-parte2 .circulo-imagen.draggable { display: none;}
+
+
+/* ejercicio 2 parte 3 */
+#ejercicio2-parte3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#ejercicio2-parte3 .boton-imagen.droppable.rna-mensajero { position: absolute; left: 600px; top: 60px; }
+#ejercicio2-parte3 .boton-imagen.droppable.rna-transferencia { position: absolute; top: 159px; left: 600px; }
+#ejercicio2-parte3 .boton-imagen.droppable.traduccion { top: 110px; position: absolute; left: 400px; }
+#ejercicio2-parte3 .boton-imagen.droppable.polipeptido { position: absolute; top: 235px; left: 600px; }
+
+#ejercicio2-parte3 .texto-molecula { position: absolute; top: 300px; left: 160px; }
+#ejercicio2-parte3 .boton-imagen.draggable.polipeptido { position: absolute; top: 340px; left: 160px; }
+#ejercicio2-parte3 .boton-imagen.draggable.rna-mensajero { position: absolute; left: 160px; top: 390px; }
+#ejercicio2-parte3 .boton-imagen.draggable.rna-transferencia { position: absolute; left: 160px; top: 440px; }
+
+#ejercicio2-parte3 .texto-proceso { position: absolute; top: 302px; left: 380px; }
+#ejercicio2-parte3 .boton-imagen.draggable.replicacion { position: absolute; top: 340px; left: 380px; }
+#ejercicio2-parte3 .boton-imagen.draggable.traduccion { position: absolute; top: 390px; left: 380px; }
+#ejercicio2-parte3 .boton-imagen.draggable.transcripcion { position: absolute; top: 440px; left: 380px; }
+
+
+.parte3 .tabla-mini {
+    display: none;
+}
+#ejercicio2-parte2.parte3 .circulos-vacio {
+    left: 40px;
+}
+#ejercicio2.parte2.parte3 .bloque-casillas {
+    left: 36px;
+}
+#ejercicio2.parte2.parte3 .flecha {
+    left: 300px;
+}
+#ejercicio2.parte2.parte3 .bloque-respuestas {
+    left: 43px;
+}
+
+
+/* Pantalla cuatro */
+#pantalla4 {
+    width: 790px;
+    height: 560px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#ejercicio3 .fragmento.draggable.respuesta-A{ position: absolute; top: 426px; left: 290px; }
+#ejercicio3 .fragmento.draggable.respuesta-C{ position: absolute; top: 426px; left: 410px; }
+#ejercicio3 .fragmento.draggable.respuesta-G{ position: absolute; top: 483px; left: 290px; }
+#ejercicio3 .fragmento.draggable.respuesta-U{ position: absolute; top: 483px; left: 410px; }
+
+#ejercicio3.parte2 .fragmento.draggable {display: none;}
+
+#ejercicio3 .bloque-casillas { left: 120px; }
+#ejercicio3 .bloque-respuestas { left: 130px; }
+
+#ejercicio3.parte2 .bloque-casillas { top: 112px; }
+#ejercicio3.parte2 .bloque-respuestas { top: 230px; }
+
+
+#ejercicio3 .flecha {
+    top: 110px;
+}
+#ejercicio3 .flecha {
+    position: absolute;
+    top: 170px;  left: 380px;
+}
+#ejercicio3 .circulos-vacio {
+    top: 252px;
+    left: 128px;
+}
+#ejercicio3 .base-nitrogenada-referencia {
+    top: 380px;
+    left: 280px;
+}
+#ejercicio3 .circulo-imagen.droppable {float: left; margin-right: 2px;margin-left: 3px;margin-top: 45px;}
+
+.fondo-oscuro-2 {
+    background: rgba(0,0,0,.9);
+    position: absolute;
+    width: 790px;
+    height: 560px;
+    top: 0;
+    left: 0;
+}
+
+.fondo-oscuro-2 iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -280px;
+    margin-top: -160px;
+}
+
+a.boton-play-ultimo {
+    position: absolute;
+    left: 230px;
+    top: 190px;
+    cursor: pointer;
+}
+a.boton-play-ultimo >img {
+    cursor: pointer;
+}

@@ -1,0 +1,533 @@
+.seccion{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.pantallaCompleta{
+	width: 790px;
+	height: 560px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+}
+
+.seccion1{
+	background: #000000;
+}
+
+.banderanazi {
+  background-image: url(../img/banderanazi.png);
+  position: absolute;
+  left: 16px;
+  top: 15px;
+  width: 373px;
+  height: 259px;
+  z-index: 5;
+}
+
+.hitler {
+  background-image: url(../img/hitler.png);
+  position: absolute;
+  left: 405px;
+  top: 15px;
+  width: 370px;
+  height: 257px;
+  z-index: 4;
+}
+
+.judio{
+  background-image: url(../img/judio.png);
+  position: absolute;
+  left: 15px;
+  top: 288px;
+  width: 760px;
+  height: 255px;
+  z-index: 3;
+}
+
+.zoomeable:hover{
+	transition: .5s ease-out;
+	-moz-transform: scale(1.02);
+	-webkit-transform: scale(1.02);
+	-o-transform: scale(1.02);
+	transform: scale(1.02);
+}
+
+.botonCerrar {
+  background-image: url(../img/cerrar.png);
+  position: absolute;
+  left: 716px;
+  top: 9px;
+  width: 68px;
+  height: 68px;
+  z-index: 81;
+}
+
+.botonCerrar:hover{
+	transition: .5s ease-out;
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+.botonCerrar:active{
+	transition: .5s ease-out;
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.botonCerrar1 {
+  background-image: url(../img/cerrar.png);
+  position: absolute;
+  left: 716px;
+  top: 9px;
+  width: 68px;
+  height: 68px;
+  z-index: 52;
+}
+
+.botonCerrar1:hover{
+	transition: .5s ease-out;
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+.botonCerrar1:active{
+	transition: .5s ease-out;
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.texto{
+	font-family: Trade;
+	color: #000000;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: left;
+}
+
+.subseccion.oculta{
+	display: none;
+}
+
+.subseccion.nazismo{
+	background-image: url(../img/fondo-nazismo.png);
+	z-index: 50;
+}
+
+.subseccion.nazismo .texto{
+  position: absolute;
+  left: 58.844px;
+  top: 222.05px;
+  width: 290px;
+  height: 212px;
+  z-index: 24;
+}
+
+.subseccion.shitler{
+	background-image: url(../img/fondo-hitler.png);
+	z-index: 50;
+}
+
+.subseccion.shitler .texto{
+  position: absolute;
+  left: 431.071px;
+  top: 227.05px;
+  width: 282px;
+  height: 175px;
+  z-index: 29;
+}
+
+.subseccion.propaganda{
+	background-image: url(../img/fondo-propaganda.png);
+	z-index: 50;
+}
+
+.subseccion.propaganda .texto{
+  position: absolute;
+  left: 57.938px;
+  top: 221.05px;
+  width: 294px;
+  height: 155px;
+  z-index: 48;
+}
+
+.reproductordeaudio {
+  position: absolute;
+  left: 431.071px;
+  top: 413px;
+  width: 294px;
+  height: 93px;
+  z-index: 48;
+  display: block;
+}
+
+.reproductordeaudio .barra {
+  position: absolute;
+  left: 0px;
+  top: 32px;
+  width: 294px;
+  height: 16px;
+  background-image: url(../img/barra.png);
+  background-repeat: repeat-x;
+}
+
+.reproductordeaudio .dial {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  cursor: pointer;
+  background: #000000;
+  border-radius: 8px;
+  border: transparent 1px;
+  display: block;
+}
+
+.reproductordeaudio .controles{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	text-align: right;
+}
+
+.reproductordeaudio .controles .control{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	cursor: pointer;
+	color: #000000;
+}
+
+.reproductordeaudio .controles .play{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 0 8px 13.9px;
+	border-color: transparent transparent transparent #000000;
+}
+
+.reproductordeaudio .controles .alto{
+	width: 14px;
+	height: 14px;
+	background: #000000;
+	display: none;
+}
+
+.tocable{
+	cursor: pointer;
+}
+
+.marquesina{
+	position: absolute;
+	stroke-dasharray: 5;
+	stroke-dashoffset: 0;
+	stroke-width:1;
+	-webkit-animation: guion 60s infinite linear;
+	animation: guion 120s linear;
+	z-index: 82;
+	display: none;
+	cursor: pointer;
+}
+
+.propaganda1 {
+  	left: 463px;
+  	top: 60px;
+  	width: 204px;
+  	height: 226px;
+}
+
+.propaganda2 {
+  left: 661px;
+  top: 273px;
+  width: 53px;
+  height: 52px;
+}
+
+.propaganda3 {
+  left: 626px;
+  top: 312px;
+  width: 100px;
+  height: 57px;
+}
+
+.propaganda4 {
+  left: 438px;
+  top: 282px;
+  width: 41px;
+  height: 67px;
+}
+
+.propaganda5 {
+  left: 419px;
+  top: 386px;
+  width: 316px;
+  height: 83px;
+}
+
+.cartel {
+	transition: .5s ease-out;
+  position: absolute;
+left: 384px;
+top: 4px;
+width: 385px;
+height: auto;
+z-index: 80;
+}
+
+.cartel.prop1{
+	width: 150%;
+	top:-350px;
+	left: -225px;
+	-moz-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+
+.cartel.prop2{
+	width: 170%;
+	top:-690px;
+	left: -675px;
+	-moz-transform: rotate(-18deg);
+	-webkit-transform: rotate(-18deg);
+	-o-transform: rotate(-18deg);
+	transform: rotate(-18deg);
+}
+
+.cartel.prop3{
+	width: 190%;
+	top:-1090px;
+	left: -775px;
+	-moz-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	-o-transform: rotate(7deg);
+	transform: rotate(7deg);
+}
+
+.cartel.prop4{
+	width: 180%;
+	top:-950px;
+	left: 65px;
+	-moz-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+
+.cartel.prop5{
+	width: 110%;
+	top:-650px;
+	left: -55px;
+	-moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+
+.propagandaFondo{
+	background: url(../img/vignette.png);
+	z-index: 86;
+	display: none;
+}
+
+.propagandaFondo .texto {
+  color: #CCCCCC;
+  position: absolute;
+  left: 202px !important;
+  top: 423px !important;
+  width: 542px !important;
+  height: 82px !important;
+  z-index: 178;
+  font-family: Museo !important;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: light;
+  text-shadow: #000000 0px -1px 0px;
+}
+
+
+
+@keyframes guion {
+  to {
+    stroke-dashoffset: 10000;
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes guion {
+    to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+
+.seccion2{
+	background: url(../img/respuestasfondo.png);
+}
+
+.respuesta {
+  background-image: url(../img/respuesta.png);
+  position: relative;
+  left: 553px;
+  top: 25px;
+  width: 178px;
+  height: 41px;
+  line-height: 41px;
+  font-family: Trade;
+  color: #000000;
+  text-shadow: #FFFFFF 0px 1px 0px;
+  text-align: center;
+  font-size: 16px;
+  cursor: move;
+  margin-bottom: 10px;
+  z-index: 92;
+  box-shadow: 0px 0px 13px black;
+}
+
+.aguila {
+  position: absolute;
+  left: -52px;
+  top: 356px;
+  width: 320px;
+  height: 196px;
+  z-index: 92;
+}
+
+.pregunta{
+  position: absolute;
+  left: 72px;
+  top: 170px;
+  width: 441px;
+  height: 238px;
+  z-index: 90;
+  background: url(../img/preguntas_pregunta.png);
+}
+
+.pregunta .texto {
+  position: absolute;
+  left: 24px;
+  top: 61px;
+  width: 275px;
+  height: 123px;
+  font-family: Trade;
+  color: #000000;
+  text-shadow: #f4ecdf 0px 1px 0px;
+}
+
+.retro{
+	display: none;
+	z-index: 98;
+}
+
+.retro.mala{
+	background-image: url(../img/retro-mail-fondo.png)
+}
+
+.retro.buena{
+	background-image: url(../img/retro-bien-fondo.png)
+}
+
+
+.retro .texto{
+  position: absolute;
+  left: 220px;
+  top: 271px;
+  width: 260px;
+  height: 123px;
+  z-index: 163;
+  font-family: Trade;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  text-shadow: #f4ecdf 0px 1px 0px;
+  text-align: left;
+}
+
+
+.cerrarRetro {
+  background-image: url(../img/cerrar.png);
+  position: absolute;
+  left: 716px;
+  top: 9px;
+  width: 68px;
+  height: 68px;
+  z-index: 99;
+}
+
+.cerrarRetro:hover{
+	transition: .5s ease-out;
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+.cerrarRetro:active{
+	transition: .5s ease-out;
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.retrofinal{
+	z-index: 200;
+	display: none;
+	overflow: hidden;
+}
+
+.retrofinal img.crece{
+	transition: 120s ease-out;
+	-moz-transform: rotate(-22deg) scale(2);
+	-webkit-transform: rotate(-22deg) scale(2);
+	-o-transform: rotate(-22deg) scale(2);
+	transform: rotate(-22deg) scale(2);
+}
+
+.retrofinal .texto{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-shadow: 0px 0px 11px black;
+	line-height: 590px;
+	font-family: Trade;
+	display: none;
+}
+
+.reload {
+  background-image: url(../img/reload.png);
+  position: absolute;
+  left: 716px;
+  top: 9px;
+  width: 68px;
+  height: 68px;
+  z-index: 202;
+  display: none;
+}
+
+.reload:hover{
+	transition: .5s ease-out;
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+.reload:active{
+	transition: .5s ease-out;
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}

@@ -1,0 +1,322 @@
+﻿<!DOCTYPE HTML>
+<html>
+   <head>
+   	  <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta charset="utf-8" />
+      <title></title>
+      <link rel="stylesheet" href="../../common/css/interfaz.css" type="text/css" />
+      <link rel="stylesheet" href="css/jplayer.blue.monday.css" type="text/css" />
+      <link rel="stylesheet" href="css/activity.css"  type="text/css" />
+      <link rel="stylesheet" href="css/klok.css"  type="text/css" />
+      <script src="../../common/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="config.js"></script>
+      <script type="text/javascript" src="../../common/js/jquery.touchSwipe.min.js"></script>
+      <script type="text/javascript" src="../../common/js/interfaz.js"></script>
+      <script type="text/javascript" src="../../common/js/multipanel.js"></script>
+	  <script type="text/javascript" src="js/generales.js"></script>
+   </head>
+   <body>
+      <div id="activity">
+      <div id="fondomovil"></div>
+         <div id="panelReel">
+
+            <!-- PANEL 1 -->
+            <section class="seccion section1 secc1 pantallaCompleta">
+
+               <div id="pantallaUno">
+
+                  <div class="acordeon">
+
+                     <div class="parte cerrado" id="socialismo">
+                        <a href="#" class="llave"></a>
+                        <div class="contenido">
+                           <div class="botones">
+                              <button id="boton-socialismo"><img src="img/C_boton01.png"></button>
+                              <button id="boton-informe"><img src="img/C_boton02.png"></button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="parte cerrado" id="capitalismo">
+                        <a href="#" class="llave"></a>
+                        <div class="contenido">
+                           <div class="botones">
+                              <button id="boton-capitalismo"><img src="img/B_boton01.png"></button>
+                              <button id="boton-truman"><img src="img/B_boton02.png"></button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="parte cerrado" id="guerraFria">
+                        <a href="#" class="llave"></a>
+                        <div class="contenido">
+                           <button id="contexto"><img src="img/A_boton.png"></button>
+                        </div>
+                     </div>
+
+                     <div class="parte" id="ejercicio">
+                        <div class="contenido">
+                           <ul id="droppables">
+                              <li class="droppable" data-respuesta="telon-acero">Expresión del ministro británico que definió la situación de Europa al término de la Segunda Guerra Mundial.</li>
+                              <li class="droppable" data-respuesta="informe-jdanov">Doctrina que se llamaba a sí misma “anti-imperialista y democrática” que buscaba hacer frente al bloque rival.</li>
+                              <li class="droppable" data-respuesta="doctrina-truman">Política iniciada en 1947 que intentó contener el avance del socialismo en Europa y el mundo.</li>
+                              <li class="droppable" data-respuesta="plan-marshall">Para EUA, la ayuda económica era fundamental en la lucha contra el socialismo, por ello puso en marcha el:</li>
+                              <li class="droppable" data-respuesta="fascista-imperialista">Características que, según los representantes soviéticos, tenía el sistema estadounidense.</li>
+                              <li class="droppable" data-respuesta="opresivo-terrorista">Características que, según los representantes de EUA, tenía el sistema soviético.</li>
+                              <li class="droppable" data-respuesta="pacto-varsovia">Acuerdo de defensa y ayuda militar puesto en práctica por la URSS para afirmar </li>
+                              <li class="droppable" data-respuesta="democracia">EUA se creía defensor de esta forma de gobierno, aunque en varios de sus aliados existieran regímenes autoritarios. </li>
+                              <li class="droppable" data-respuesta="contener-rival">Objetivo que tuvieron la Doctrina Truman y el Informe Jdanov.</li>
+                              <li class="droppable" data-respuesta="libertad">Valor que ambos bloques decían ser depositarios y defensores y que tomaban como justificación para detener al contrincante.</li>
+                           </ul>
+
+                           <ul class="draggables">
+                              <li class="draggable" data-respuesta="telon-acero"><img src="img/respuesta01.png"></li>
+                              <li class="draggable" data-respuesta="informe-jdanov"><img src="img/respuesta02.png"></li>
+                              <li class="draggable" data-respuesta="doctrina-truman"><img src="img/respuesta03.png"></li>
+                              <li class="draggable" data-respuesta="plan-marshall"><img src="img/respuesta04.png"></li>
+                              <li class="draggable" data-respuesta="fascista-imperialista"><img src="img/respuesta05.png"></li>
+                              <li class="draggable" data-respuesta="opresivo-terrorista"><img src="img/respuesta06.png"></li>
+                              <li class="draggable" data-respuesta="pacto-varsovia"><img src="img/respuesta07.png"></li>
+                              <li class="draggable" data-respuesta="democracia"><img src="img/respuesta08.png"></li>
+                              <li class="draggable" data-respuesta="contener-rival"><img src="img/respuesta09.png"></li>
+                              <li class="draggable" data-respuesta="libertad"><img src="img/respuesta10.png"></li>
+                           </ul>
+                        </div>
+                     </div>
+
+                  </div>
+
+               </div>
+
+
+               <!-- Respuestas -->
+               <div class="window" id="ventana-respuestas" style="display:none;">
+
+                  <div class="popup2">
+                     <a href="#" class="cerrar"><img src="img/cerrar.png"></a>
+
+                     <div class="respuesta" data-respuesta="telon-acero">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>El golpe de estado en Checoslovaquia en favor del socialismo comprobó esta frase.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>Esta expresión alude a la existencia de una Europa dividida.</p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="informe-jdanov">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>La URSS decía que ella encarnaba la democracia y la libertad en oposición al imperialismo estadounidense.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>Esta doctrina el nombre del ministro soviético de propaganda y la enunció como respuesta al discurso de Truman.</p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="doctrina-truman">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>Harry Truman declaró que EUA debía ayudar a los pueblos a seguir el camino de la democracia.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>En 1947 se enunció esta política y marcó el inicio de la Guerra fría. </p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="plan-marshall">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>Este plan también tenía el objetivo de reactivar la economía europea e implantar regímenes democráticos.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>Este plan fue concebido por la URSS como un instrumento del imperialismo estadounidense.</p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="fascista-imperialista">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>El informe Jdanov decía que EUA aspiraba a la dominación mundial y, por ello, la URSS debía detenerlo.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>El ministro soviético Jdanov fue claro al declarar que la URSS y sus aliados representaban el anti-imperialismo. </p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="opresivo-terrorista">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>Harry Truman declaró que el socialismo descansaba en la supresión de las libertades individuales.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>Harry Truman fue claro al declarar que en el sistema socialista las elecciones son fraudulentas. </p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="pacto-varsovia">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>El pacto estaba destinado a vigilar que ninguno de los aliados de la URSS se saliera del sistema soviético.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>Este acuerdo se conformó en posición a la OTAN, la organización militar del bloque capitalista.</p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="democracia">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>EUA decía llevar un modo de vida basado en la voluntad de la mayoría, con instituciones libres y gobiernos representativos.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>Considera otra respuesta. En oposición al sistema dictatorial que encarnaba la URSS, EUA salía en la defensa de esta forma de gobierno.</p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="contener-rival">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>Ambas políticas decían que iban a apoyar a los pueblos que luchaban por escapar a la esfera de influencia enemiga.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>Estas políticas basaban sus principios en el límite que debían poner al capitalismo o socialismo. </p>
+                        </div>
+                     </div>
+
+                     <div class="respuesta" data-respuesta="libertad">
+                        <div class="correcta">
+                           <h3>¡Muy bien!</h3>
+                           <p>EUA decía que en sus sistema se vivía sin opresiones. La URSS, por su parte, aseguraba que el imperialismo era la pérdida de la libertad.</p>
+                        </div>
+                        <div class="incorrecta">
+                           <h3>Considera otra respuesta</h3>
+                           <p>Si bien, ambas potencias decían defender este valor, en ninguno de los bloques hubo un verdadero ejercicio de la voluntad.</p>
+                        </div>
+                     </div>
+
+                  </div>
+
+               </div> <!-- #ventana-respuestas -->
+
+               <div class="window" id="ventana-final" style="display:none;">
+                  <div class="popup3">
+                     <h3>¡Muy bien!</h3>
+                     <p>Has identificado algunas características del inicio de la Guerra Fría.</p>
+                  </div>
+               </div>
+
+               <div class="window" id="ventana-1" style="display:none;">
+                  <div class="popup1">
+                     <a href="#" class="cerrar"><img src="img/cerrar.png"></a>
+                     <p>Al final de la Segunda Guerra Mundial, las relaciones se tensan entre los Aliados. Europa se encuentra dividida en dos bloques: mientras la URSS instituye regímenes socialistas en los países del este, EUA ayuda a los europeos occidentales a recuperar su economía.  Esta situación lleva al ministro británico Winston Churchill a decir en 1946 que “ha caído sobre el continente un telón de acero”.</p>
+                  </div>
+               </div>
+
+               <div class="window" id="ventana-capitalismo" style="display:none;">
+                  <div class="popup1">
+                     <a href="#" class="cerrar"><img src="img/cerrar.png"></a>
+                     <p>En 1947 el presidente de EUA Harry Truman, formula la doctrina que lleva su nombre. Para él, el mundo está dividido en dos: de un lado, el mundo libre liderado por EUA fundado sobre la democracia, y del otro, la dictadura comunista fundada en la opresión de los pueblos, el terror y la dictadura. Para evitar el avance del comunismo, se pone en práctica el Plan Marshall de ayuda económica. Asimismo, los occidentales deciden reforzar su seguridad y se agrupan en la OTAN.</p>
+                  </div>
+               </div>
+
+               <div class="window" id="ventana-socialismo" style="display:none;">
+                  <div class="popup1">
+                     <a href="#" class="cerrar"><img src="img/cerrar.png"></a>
+                     <p>En 1947, el ministro de propaganda soviética formula un informe que lleva su nombre. Para él, el mundo está dividido en dos campos antagónicos: por un lado EUA y sus aliados y, por el otro, la URSS y sus aliados que representan el anti-imperialismo y la libertad. Se puso en marcha el Comecon, un consejo de asistencia económica entre la URSS y los países de Europa del este; y para reforzar la seguridad militar, el Pacto de Varsovia.</p>
+                  </div>
+               </div>
+
+               <div class="window" id="ventana-2" style="display:none;">
+                  <div class="player-window">
+                     <a href="#" class="cerrar cerrar-audio"><img src="img/cerrar2.png"></a>
+
+                     <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+                     <div id="jp_container_1" class="jp-audio">
+                        <div class="jp-type-single">
+                           <div class="jp-details">
+                              <ul>
+                                 <li><span class="jp-title"></span></li>
+                              </ul>
+                           </div>
+                           <div class="jp-gui jp-interface">
+                              <ul class="jp-controls">
+                                 <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                                 <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                              </ul>
+                              <div class="jp-progress">
+                                 <div class="jp-seek-bar">
+                                    <div class="jp-play-bar"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="jp-no-solution">
+                              <span>Update Required</span>
+                              To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="window" id="ventana-3" style="display:none;">
+                  <div class="player-window">
+                     <a href="#" class="cerrar cerrar-audio"><img src="img/cerrar2.png"></a>
+
+                     <div id="jquery_jplayer_2" class="jp-jplayer"></div>
+
+                     <div id="jp_container_2" class="jp-audio">
+                        <div class="jp-type-single">
+                           <div class="jp-details">
+                              <ul>
+                                 <li><span class="jp-title"></span></li>
+                              </ul>
+                           </div>
+                           <div class="jp-gui jp-interface">
+                              <ul class="jp-controls">
+                                 <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                                 <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                              </ul>
+                              <div class="jp-progress">
+                                 <div class="jp-seek-bar">
+                                    <div class="jp-play-bar"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="jp-no-solution">
+                              <span>Update Required</span>
+                              To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </section>
+            <!-- FIN PANEL 1 -->
+         </div> <!-- fin panelReel -->
+      </div><!-- fin activity -->
+
+      <audio src="audio/sound1.mp3" id="sonido-panel" style="display:none;"></audio>
+
+      <script type="text/javascript" src="js/plugins/jquery-ui-1.10.3.custom.min.js"></script>
+      <script type="text/javascript" src="js/plugins/jquery.animate-enhanced.min.js"></script>
+      <script type="text/javascript" src="js/plugins/klokAlinear.plugin.js"></script>
+      <script type="text/javascript" src="js/plugins/klokMenuFalso.plugin.js"></script>
+      <script type="text/javascript" src="js/plugins/resize.plugin.js"></script>
+      <script type="text/javascript" src="js/plugins/jquery.jplayer.min.js"></script>
+      <script type="text/javascript" src="js/klok.js"></script>
+   </body>
+</html>

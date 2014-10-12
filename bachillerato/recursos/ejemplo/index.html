@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML>
+<html>
+   <head>
+   	  <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta charset="utf-8" />
+      <title></title>
+      <link rel="stylesheet" href="../../common/css/interfaz.css" type="text/css" />
+      <link rel="stylesheet" href="css/activity.css"  type="text/css" />
+      <link rel="stylesheet" href="css/klok.css"  type="text/css" />
+      <script src="../../common/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="config.js"></script>
+      <script type="text/javascript" src="../../common/js/jquery.touchSwipe.min.js"></script>
+      <script type="text/javascript" src="../../common/js/interfaz.js"></script>
+      <script type="text/javascript" src="../../common/js/multipanel.js"></script>
+	  <script type="text/javascript" src="js/generales.js"></script>
+   </head>
+   <body>
+      <div id="activity">
+      <div id="fondomovil"></div>
+         <div id="panelReel">
+
+            <!-- PANEL 1 -->
+            <section class="seccion seccion1 pantallaCompleta">
+            	<div class="banderanazi tocable zoomeable" subseccion="nazismo"></div>
+            	<div class="hitler tocable zoomeable" subseccion="shitler"></div>
+            	<div class="judio tocable zoomeable" subseccion="propaganda"></div>
+            	<div class="pantallaCompleta subseccion oculta nazismo">
+	            	<div class="botonCerrar tocable"></div>
+	            	<div class="texto">
+		            	El partido nazi surgió en 1919 compuesto por antiguos combatientes de la Primera Guerra Mundial. Su dirigente, Adolf Hitler, aprovechó la crisis económica y el descontento social contra el gobierno de la república alemana para ganar adeptos. En 1934, Hitler se convirtió en Reichführer (líder del Imperio) bajo el lema “Un pueblo, un imperio, un líder”.
+	            	</div>
+            	</div>
+            	<div class="pantallaCompleta subseccion oculta shitler">
+	            	<div class="botonCerrar tocable"></div>
+	            	<div class="texto">
+		            	El programa nazi era expansionista y pangermanista. Hitler quería establecer un Reich (Imperio) milenario, uniendo a todos los pueblos de lengua y cultura alemana y dotándolos de un espacio vital. La anexión de Polonia y Checoslovaquia era fundamental para formar ese espacio y asegurar la supervivencia del pueblo alemán.
+	            	</div>
+	            	<div class="reproductordeaudio">
+	            		<audio id="hitleraudio">
+							<source src="audio/marcha.mp3" type="audio/mpeg">
+						</audio>
+		            	<div class="barra">
+			            	<div class="dial"></div>
+		            	</div>
+		            	<div class="controles">
+		            		<div class="play control"></div>
+							<div class="alto control"></div>
+		            	</div>
+	            	</div>
+            	</div>
+            	<div class="pantallaCompleta subseccion oculta propaganda">
+	            	<div class="botonCerrar tocable"></div>
+	            	<svg class="marquesina propaganda1" zooma="prop1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.7 228.8" style="enable-background:new 0 0 206.7 228.8;" xml:space="preserve">
+						<path style="fill:none;stroke:#E1E1E1;stroke-width:1.2;stroke-miterlimit:10;" d="M46.3,34c0,0,6.6-19.2,31-20.3c0,0,6-3.6,9-3.8
+							V6.6l9-3.3h5.8l1.9-2.7c0,0,7.1-2.2,12.6,4.1l1.9,1.1V1.4c0,0,14.5,0.8,20.5,8.2c6,7.4,6,5.5,6,5.5h3.8l2.7,7.9c0,0,7.4,1.6,9.3,4.7
+							c0,0,3,11.2,2.7,15.3c0,0,20.3,8.2,24.4,37c0,0,7.1,2.5,8.5,12.9v14l8.5,13.1c0,0,3.6,2.2,1.9,8.5c-1.6,6.3-6.8,9.3-6.8,9.3
+							l-0.8,23.3c0,0,1.4,3,0.3,5.8c-1.1,2.7-1.9,4.1-1.9,4.1l1.1,2.7l-1.9,13.7c0,0-1.1,8.5-0.3,10.7c0.8,2.2,1.1,11.2,1.1,11.2
+							s0.3,7.9-6.3,11c-6.6,3-17.3,6.3-17.3,6.3l-4.7,1.9c0,0-69.3-5.5-86.6-37l-3.8-4.1c0,0-3.8,2.7-4.7,2.7s-8.5-1.9-8.5-1.9l-7.1-4.7
+							l-4.1-0.3l-7.4,7.1c0,0-11-4.9-13.7-11.2c0,0-13.1-4.7-18.4-18.9c0,0-24.9-24.4-8.2-68.2c0,0-0.8-21.6,8.2-29.9
+							C14.2,62.3,20,32.4,46.3,34z"/>
+					</svg>
+					<svg class="marquesina propaganda2" zooma="prop2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.8 51.2" style="enable-background:new 0 0 51.8 51.2;" xml:space="preserve">
+						<path style="fill:none;stroke:#E1E1E1;stroke-width:1.2;stroke-miterlimit:10;" d="M16,0.8l1.9,7.7L19,12l-1.5,8.8L19,29l1.9,9.6
+							h3.8l4.9-3l4.7-0.3l1.4-2.7l1.6-0.5l1.4-2.5l1.6-0.5v-3.3l2.5,1.4l2.2-3.3v3l3.6-2.5v2.5h2.7l-4.9,7.1l-1.1,4.7c0,0-5.5,1.6-6.3,1.6
+							S31.6,43,31.6,43s7.9-0.5,7.4,2.5l-8.2,1.6l-6.3,3.8L16,49.8l-1.6,1.1L12.5,49l-9.6,1.9v-2.5l7.7-2.7L2.9,27.9l4.3-2.1l-4.3-1.2
+							l-1.4-4.1l2.7-0.8l-2.7-1.4l-1.1-2.2l6.7,0.3V15l-4.8-3.3l1.1-3l4,3.3l1.5-0.3L4.8,5.6l0.3-2.1l4.7,4.4l0.8-7.1l2.7,4.9L16,0.8z"/>
+					</svg>
+
+					<svg class="marquesina propaganda3" zooma="prop3" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 105.4 60.4" style="enable-background:new 0 0 105.4 60.4;" xml:space="preserve">
+						<path style="fill:none;stroke:#E1E1E1;stroke-width:1.2;stroke-miterlimit:10;" d="M76.7,3.9c-1.6,0.4-7,2.7-7,2.7S77.7,6,77.1,9
+							l-8.2,1.6l-6.3,3.8l-8.5-1.1l-1.6,1.1l-1.9-1.9L41,14.5v-2.5l7.7-2.7L45,0.9C19.9,3,0.6,15.3,0.6,30.2c0,16.4,23.3,29.6,52.1,29.6
+							s52.1-13.3,52.1-29.6C104.8,18.8,93.4,8.9,76.7,3.9z"/>
+					</svg>
+
+					<svg class="marquesina propaganda4" zooma="prop4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.8 60.2" style="enable-background:new 0 0 36.8 60.2;" xml:space="preserve">
+						<polygon style="fill:none;stroke:#E1E1E1;stroke-width:1.2;stroke-miterlimit:10;" points="5.8,0.5 11.8,6.4 7.7,20.4 6.5,23.9
+							11.8,26.1 16,11.1 36.5,16.9 35.3,26.1 20,21.4 17.3,30.9 34.5,35.2 28.8,59.9 21.2,56.9 25.3,41.9 15.8,39.7 13.3,53.9 2,48.9
+							3.5,39.7 8.5,42.9 10,34.2 0.3,29.2 "/>
+					</svg>
+
+					<svg  class="marquesina propaganda5" zooma="prop5"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 317.7 83.8" style="enable-background:new 0 0 317.7 83.8;" xml:space="preserve">
+						<g>
+							<path style="fill:none;stroke:#E1E1E1;stroke-width:1.2;stroke-miterlimit:10;" d="M183.2,6.6l-10,6.2c0,0,4.5,8.8,11.5,8.2s11.8-3,9.8-12.8
+								l-2.5,0.5c0,0,1.2,8-4.2,5S183.2,6.6,183.2,6.6z"/>
+							<path style="fill:none;stroke:#E1E1E1;stroke-width:1.2;stroke-miterlimit:10;" d="M132.4,32.8l3.8,9l7.5-5.2l-3-14.5l-7.2,7l-6.8-7.5l-6,7l-2.8,0.2
+								l-1-8l-7,5.5l-10.8-0.2l0.5,32.8c0,0-4.5,2-4.2-7.5s-0.2-45-0.2-45L84.9,6.1l1,50.5c0,0-7.2,2.8-7.5-1.5l-0.5-9l4.5-0.2l0.5-10.8
+								l-4.2-0.5l-0.8-28H67.2l-0.2,30.5l-7.8,7.8l2.5-17.5l-7.5-6.8l9-8.2l-9.5-9.2l-9.8,9.5l8,8.2l-6,9l-12.2-7.2l-8,4l-5-9l6.2-5.2
+								l14.1,0.8l8.6-12.5H26.2L4.9,16.8l16.8,44.5l-13-12.2l-8,8.8l12.5,13.8l7.2-8l12.2-7l-4.7-20.5h2.8l3.5,3l1,27l-2.8,3.5l-6,4
+								l7.2,9.5l7.4-5.8l2.8-4l1-41.5l4.8,3v28.2l7.5,7.5l9.5-9.3l1.2,3.5l7.2,5.5l9.2-11.3l2.2,5.3l6,6l6.2-8l12,7.8l7.5-9.5l-7.5-4.5
+								l10.5-5.2l-2.8-19.2l1.5,0.2l1.2,2.2l2.2,27.2c0,0,0.2,8.3,6.5,8.3l7.8-9.5l-5-4.8L132.4,32.8z M65.9,58.1c0,0-3.8-0.8-4.8-4.5
+								s0-7.2,0-7.2h4.8V58.1z M113.4,50.3c-0.8,0-3.5,1.2-3.5,1.2v-17C109.9,34.6,114.2,50.3,113.4,50.3z"/>
+							<path style="fill:none;stroke:#E1E1E1;stroke-width:1.2;stroke-miterlimit:10;" d="M229.2,44.3l0.5-18.5l-8-4.5l-6.2,4.5l-10.6-0.5l-1.6,32.8
+								c0,0-5,4-5-8.2s0.8-22.5,0.8-22.5l-6.5-5.2l-9.2,8.5l4.8,2.2l0.8,26c0,0-7,1.8-6.8-12.5s0-19.2,0-19.2l-6.8-5.5l-9.5,7l-2-14l10-12
+								l-31.2-2l-10.8,11.2c0,0,32.2,1.2,31.2,1.2s-9.5,7.5-9.5,7.5s8.8,43,7.5,43.2c-1.2,0.3-9-6.8-10-13l-7.2,11.8c0,0,5.8,12,13.5,14.8
+								c0,0,8.5-18,13.8-19.8l-4.8-26.2l1.5-0.5l3.2,2.8l1.5,22c0,0-0.5,10.3,8.8,14.8l7-8.3c0,0,5,6.8,8,7l8.6-8.8c0,0,2.4,7,6.1,7.8l9-7
+								l4,8l-11.2,0.5l-7.3,7.8l18.6,1.8c0,0,4.2-12,10.8-14.2C234.7,64.8,228.9,62.1,229.2,44.3z M219.9,57.8c0,0-5.5,3.6-6-14.2V29.3
+								l6,3V57.8z"/>
+							<path style="fill:none;stroke:#E1E1E1;stroke-width:1.2;stroke-miterlimit:10;" d="M317.2,29.8c0,0-0.8-13.8-28.5-29.2l-14.8,7.5l26.2,13l-0.8,3.7
+								l-11.2,1c0,0,1.8,3.8,1.8,14s0.5,18.2,0.5,18.2s-6.8,1.8-6.2-11s0.5-18.8,0.5-18.8l0.5-2.8l-8.8-4.5l-7.6,6l-8.1-6l-7.5,7l-0.8-7
+								c0,0-7.5,6.2-19.2,6.2v24.5c0,0-1,13.8,11.8,16.8l8-7.8l-7.5-5.5l10.5-4.5l-3-20l4.6,2.2l2.2,0.8v27.5c0,0,2.5,5.5,6,7.3l7.8-9
+								l-4.6-5V31.1l6.1,1v25.8c0,0,3.8,8.5,8.2,10.8l7-8l11.2,8l6.2-8.3l9.5-1.8C317.2,58.6,316.7,42.8,317.2,29.8z M243.3,52.6v-18
+								l3.6,16.2L243.3,52.6z M306.9,56.1l-6.2-4.8V28.1l1.5-4.5l4.8,8V56.1z"/>
+							<polygon style="fill:none;stroke:stroke-width:1.5;#FFFFFF;stroke-miterlimit:10;" points="140.9,43.3 135.9,48.3 150.7,48.3 155.2,43.3 	"/>
+						</g>
+					</svg>
+
+					<div class="texto">
+		            	Los regímenes totalitarios se apoyaron en la propaganda para consolidar su poder e inculcar su ideología a la población. Inicialmente utilizado por la publicidad comercial, el cartel comenzó a utilizarse con fines políticos en el siglo XX y se convirtió en una herramienta privilegiada de la propaganda nazi.
+	            	</div>
+	            	<img src="img/cartel.png" class="cartel">
+	            	<div class="pantallaCompleta propagandaFondo">
+		            	<div class="botonCerrar1 tocable"></div>
+		            	<div class="texto">El centro del cartel lo ocupa la imagen de un joven alemán, de espíritu combativo y raza aria, como Hitler quería que fuera la juventud alemana.</div>
+	            	</div>
+
+            	</div>
+            </section>
+             <section class="seccion seccion2 pantallaCompleta">
+             	<div class="retro pantallaCompleta">
+             		<div class="cerrarRetro tocable"></div>
+	             	<div class="texto">El centro del cartel lo ocupa la imagen de un joven alemán, de espíritu combativo y raza aria, como Hitler quería que fuera la juventud alemana.</div>
+             	</div>
+             	<img src="img/agula.png" class="aguila" width="320" height="196">
+             	<div class="retrofinal pantallaCompleta">
+             		<img src="img/retrofinal.png" class="pantallaCompleta" width="790" height="560">
+             		<div class="reload tocable" onclick="Reinicia();"></div>
+	             	<div class="texto pantallaCompleta"><strong>¡Muy bien!</strong> Has identificado algunas características del nazismo.</div>
+             	</div>
+             </section>
+            <!-- FIN PANEL 1 -->
+         </div> <!-- fin panelReel -->
+      </div><!-- fin activity -->
+      <script type="text/javascript" src="js/plugins/jquery-ui-1.10.3.custom.min.js"></script>
+      <script type="text/javascript" src="js/plugins/jquery.animate-enhanced.min.js"></script>
+      <script type="text/javascript" src="js/plugins/klokAlinear.plugin.js"></script>
+      <script type="text/javascript" src="js/plugins/klokMenuFalso.plugin.js"></script>
+      <script type="text/javascript" src="js/plugins/resize.plugin.js"></script>
+   </body>
+</html>

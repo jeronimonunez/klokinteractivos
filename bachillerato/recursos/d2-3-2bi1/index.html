@@ -1,0 +1,570 @@
+﻿<!DOCTYPE HTML>
+<html>
+   <head>
+   	  <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta charset="utf-8" />
+      <title></title>
+      <link rel="stylesheet" href="../../common/css/interfaz.css" type="text/css" />
+      <link rel="stylesheet" href="css/activity.css"  type="text/css" />
+      <link rel="stylesheet" href="css/klok.css"  type="text/css" />
+      <script src="../../common/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="config.js"></script>
+      <script type="text/javascript" src="../../common/js/jquery.touchSwipe.min.js"></script>
+      <script type="text/javascript" src="../../common/js/interfaz.js"></script>
+      <script type="text/javascript" src="../../common/js/multipanel.js"></script>
+	  <script type="text/javascript" src="js/generales.js"></script>
+   </head>
+   <body>
+      <div id="activity">
+         <div id="fondomovil"></div>
+         <div id="panelReel">
+
+            <!-- PANEL 1 -->
+            <section class="seccion seccion1 secc1 pantallaCompleta">
+               <div class="microscopio" id="anemia-falciforme">
+
+                  <ul id="scene"
+                     data-scalar-x="18"
+                     data-scalar-y="18">
+                     <li class="layer" data-depth="0.00"><img src="img/A/fondo.png"></li>
+                     <li class="layer" data-depth="0.50">
+                        <div class="capa-microscopio">
+                           <img src="img/A/microscopio2.png">
+                        </div>
+                     </li>
+                     <li class="layer" data-depth="1.00">
+                        <div id="pantalla-2-image">
+                           <img src="img/A/pantalla2.png">
+                        </div>
+                     </li>
+                  </ul>
+
+                  <div class="texto">
+                     <p>La anemia falcifome es un trastorno de la sangre causado por un cambio genético. En las personas con este padecimiento, la alteración de un nucleótido específico en el gen codificante de las cadenas β de la hemoglobina produce glóbulos rojos más frágiles y con una forma anormal. La hemoglobina defectuosa es llamada hemoglobina S (HbS) y reemplaza a la hemoglobina normal (HbA).</p>
+
+                     <p>Durante el desarrollo de este interactivo, llevarás a acabo los mecanismos mediante los cuales se sintetiza la hemoglobina a partir del gen codificante. Para recordar las paso de la síntesis de proteína observa el video. </p>
+                  </div>
+
+                  <a href="#" class="boton" id="reproducir-video"><img src="img/A/boton_play.png" alt="reproducir video"></a>
+                  <a href="#" class="boton" id="pantalla-siguiente"><img src="img/A/boton_siguiente.png" alt="Siguiente pantalla"></a>
+
+                  <div id="contenedor-video" class="oculto">
+                     <a href="#" class="boton boton-cerrar" id="cerrar-video">Cerrar</a>
+
+                     <div id="ytplayer"></div>
+                  </div>
+               </div>
+            </section>
+            <!-- FIN PANEL 1 -->
+
+            <!-- PANEL 2 -->
+            <section class="seccion seccion2 secc2 pantallaCompleta">
+
+               <div id="pantalla2">
+
+                  <ul id="scene2"
+                     data-scalar-x="18"
+                     data-scalar-y="18">
+                     <li class="layer" data-depth="0.00"><img src="img/B/fondo.png"></li>
+                     <li class="layer" data-depth="0.40">
+                        <div id="capa-celula-1">
+                           <img src="img/B/fondo_celula_01.png">
+                        </div>
+                     </li>
+                     <li class="layer" data-depth="0.60">
+                        <div id="capa-celula-2">
+                           <img src="img/B/fondo_celula_02.png">
+                        </div>
+                     </li>
+                     <li class="layer" data-depth="0.80">
+                        <div id="capa-celula-3">
+                           <img src="img/B/fondo_celula_03.png">
+                        </div>
+                     </li>
+                     <li class="layer" data-depth="1.00">
+                        <div class="capa-microscopio">
+                           <img src="img/A/microscopio2.png">
+                        </div>
+                     </li>
+                  </ul>
+
+                  <div id="ejercicio1">
+                     <img src="img/B/ATTG.png" id="attg-imagen">
+
+                     <h3 class="titulo-ejercicio">Fragmento gen HbA</h3>
+
+                     <div class="bloque-respuestas">
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                     </div>
+
+                     <img src="img/B/casillas.png" class="bloque-casillas">
+
+                     <img src="img/B/bases_nitrogenada/base_nitrogenada.png" class="base-nitrogenada-referencia">
+
+                     <span class="fragmento draggable respuesta-A" data-respuesta="A"></span>
+                     <span class="fragmento draggable respuesta-C" data-respuesta="C"></span>
+                     <span class="fragmento draggable respuesta-G" data-respuesta="G"></span>
+                     <span class="fragmento draggable respuesta-U" data-respuesta="U"></span>
+
+                  </div>
+
+                  <div id="ejercicio1-parte2" style="display:none;">
+                     <img src="img/B/flecha.png" class="flecha">
+
+                     <img src="img/cuadro_vacio.png" class="boton-imagen droppable doble-cadena" data-respuesta="doble-cadena">
+                     <img src="img/cuadro_vacio.png" class="boton-imagen droppable rna-mensajero" data-respuesta="rna-mensajero">
+                     <img src="img/cuadro_vacio.png" class="boton-imagen droppable transcripcion" data-respuesta="transcripcion">
+                     <img src="img/cuadro_vacio.png" class="boton-imagen droppable cadena-antisentido" data-respuesta="cadena-antisentido">
+
+                     <img src="img/B/acido_nucleico.png" class="texto-acido-nucleico">
+
+                     <div class="contenedor-draggables-1">
+                        <img src="img/B/cuadro_cadenaAntisentido.png" class="boton-imagen draggable cadena-antisentido" data-respuesta="cadena-antisentido">
+                        <img src="img/B/cuadro_dobleCadena.png" class="boton-imagen draggable doble-cadena" data-respuesta="doble-cadena">
+                        <img src="img/B/cuadro_RNAmensajero.png" class="boton-imagen draggable rna-mensajero" data-respuesta="rna-mensajero">
+                     </div>
+
+                     <img src="img/proceso.png" class="texto-proceso">
+
+                     <div class="contenedor-draggables-2">
+                        <img src="img/cuadro_replicacion.png" class="boton-imagen draggable replicacion" data-respuesta="replicacion">
+                        <img src="img/cuadro_traduccion.png" class="boton-imagen draggable traduccion" data-respuesta="traduccion">
+                        <img src="img/cuadro_transcripcion.png" class="boton-imagen draggable transcripcion" data-respuesta="transcripcion">
+                     </div>
+                  </div> <!-- #ejercicio1-parte2 -->
+
+                  <div id="ejercicio1-parte3" class="fondo-oscuro" style="display:none;">
+                     <div class="ventana">
+                        <div class="ventana-1">
+                           <h2>¡Excelente!</h2>
+                           <p>Ahora responde las siguientes preguntas para poder pasar a la siguiente etapa de la síntesis de la hemoglobina.</p>
+                           <a href="#" class="siguiente-ventana"><img src="img/A/boton_siguiente.png"></a>
+                        </div>
+                        <div class="ventana-2 ventana-pregunta" data-pregunta="1" style="display:none;">
+                           <p>1. ¿En qué parte de una célula eucariota se lleva a cabo el proceso de transcripción?</p>
+                           <ul>
+                              <li><label for="ej1p3-1"><input type="radio" name="ej1p3-1">en el citoplasma</label></li>
+                              <li><label for="ej1p3-1"><input type="radio" name="ej1p3-1" data-correcta="1">en el núcleo</label></li>
+                              <li><label for="ej1p3-1"><input type="radio" name="ej1p3-1">en la membrana plasmática</label></li>
+                              <li><label for="ej1p3-1"><input type="radio" name="ej1p3-1">en los ribosomas</label></li>
+                           </ul>
+                        </div>
+                        <div class="ventana-3 ventana-pregunta" data-pregunta="2" style="display:none;">
+                           <p>2. ¿Qué base nitrogenada substituye a la timina (T) en el ARN?</p>
+                           <ul>
+                              <li><label for="ej1p3-2"><input type="radio" name="ej1p3-2">Adenina</label></li>
+                              <li><label for="ej1p3-2"><input type="radio" name="ej1p3-2">Guanina</label></li>
+                              <li><label for="ej1p3-2"><input type="radio" name="ej1p3-2">Citosina</label></li>
+                              <li><label for="ej1p3-2"><input type="radio" name="ej1p3-2" data-correcta="1">Uracilo</label></li>
+                           </ul>
+                        </div>
+                        <div class="ventana-4 ventana-pregunta" data-pregunta="3" style="display:none;">
+                           <p>3. ¿Cuál es el nombre de la enzima que permite llevar a cabo la transcripción de la información presente en el ADN a ARNm?</p>
+                           <ul>
+                              <li><label for="ej1p3-3"><input type="radio" name="ej1p3-3">Helicasa</label></li>
+                              <li><label for="ej1p3-3"><input type="radio" name="ej1p3-3">ADN polimerasa</label></li>
+                              <li><label for="ej1p3-3"><input type="radio" name="ej1p3-3" data-correcta="1">ARN polimerasa</label></li>
+                              <li><label for="ej1p3-3"><input type="radio" name="ej1p3-3">Amilasa</label></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div> <!-- #ejercicio1-parte3 -->
+
+               </div>
+            </section>
+            <!-- FIN PANEL 2 -->
+
+            <!-- PANEL 3 -->
+            <section class="seccion seccion3 secc3 pantallaCompleta">
+               <div id="pantalla3">
+
+                  <ul id="scene3"
+                     data-scalar-x="18"
+                     data-scalar-y="18">
+                     <li class="layer" data-depth="0.20">
+                        <div><img style="position: relative;top: -15px;" src="img/C/fondo.png"></div>
+                     </li>
+                     <li class="layer" data-depth="1.00">
+                        <div class="capa-microscopio">
+                           <img src="img/A/microscopio2.png">
+                        </div>
+                     </li>
+                  </ul> <!-- #scene3 -->
+
+                  <div id="ejercicio2">
+
+                     <img src="img/C/casillas.png" class="bloque-casillas">
+
+                     <img src="img/C/flecha.png" class="flecha">
+
+                     <div class="bloque-respuestas">
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                     </div>
+
+                     <img src="img/B/bases_nitrogenada/base_nitrogenada.png" class="base-nitrogenada-referencia">
+
+                     <span class="fragmento draggable respuesta-A" data-respuesta="A"></span>
+                     <span class="fragmento draggable respuesta-C" data-respuesta="C"></span>
+                     <span class="fragmento draggable respuesta-G" data-respuesta="G"></span>
+                     <span class="fragmento draggable respuesta-U" data-respuesta="U"></span>
+                  </div> <!-- #ejercicio2 -->
+
+                  <div id="ejercicio2-parte2" style="display:none;">
+                     <div class="circulos-vacio">
+                        <span class="circulo-imagen droppable" data-respuesta="met"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="val"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="his"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="leu"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="tre"></span>
+
+                        <span class="circulo-imagen droppable" data-respuesta="pro"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="lis"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="glu"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="glu"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="ser"></span>
+                     </div>
+
+                     <img src="img/C/tabla.png" class="tabla-mini">
+
+                     <div class="tabla-grande" style="display:none;">
+                        <a href="#" class="boton boton-cerrar">Cerrar</a>
+                     </div>
+
+                     <div class="circulo-imagen-container" style="display:none;">
+                        <span class="circulo-imagen draggable respuesta-fen respuesta-1" data-respuesta="fen"></span>
+                        <span class="circulo-imagen draggable respuesta-leu respuesta-2" data-respuesta="leu"></span>
+                        <span class="circulo-imagen draggable respuesta-ser respuesta-3" data-respuesta="ser"></span>
+                        <span class="circulo-imagen draggable respuesta-tir respuesta-4" data-respuesta="tir"></span>
+                        <span class="circulo-imagen draggable respuesta-cis respuesta-5" data-respuesta="cis"></span>
+                        <span class="circulo-imagen draggable respuesta-trp respuesta-6" data-respuesta="trp"></span>
+                        <span class="circulo-imagen draggable respuesta-leu respuesta-7" data-respuesta="leu"></span>
+                        <span class="circulo-imagen draggable respuesta-pro respuesta-8" data-respuesta="pro"></span>
+                        <span class="circulo-imagen draggable respuesta-his respuesta-9" data-respuesta="his"></span>
+                        <span class="circulo-imagen draggable respuesta-gln respuesta-10" data-respuesta="gln"></span>
+                        <span class="circulo-imagen draggable respuesta-arg respuesta-11" data-respuesta="arg"></span>
+                        <span class="circulo-imagen draggable respuesta-ile respuesta-12" data-respuesta="ile"></span>
+                        <span class="circulo-imagen draggable respuesta-met respuesta-13" data-respuesta="met"></span>
+                        <span class="circulo-imagen draggable respuesta-tre respuesta-14" data-respuesta="tre"></span>
+                        <span class="circulo-imagen draggable respuesta-asn respuesta-15" data-respuesta="asn"></span>
+                        <span class="circulo-imagen draggable respuesta-lis respuesta-16" data-respuesta="lis"></span>
+                        <span class="circulo-imagen draggable respuesta-ser respuesta-17" data-respuesta="ser"></span>
+                        <span class="circulo-imagen draggable respuesta-arg respuesta-18" data-respuesta="arg"></span>
+                        <span class="circulo-imagen draggable respuesta-val respuesta-19" data-respuesta="val"></span>
+                        <span class="circulo-imagen draggable respuesta-ala respuesta-20" data-respuesta="ala"></span>
+                        <span class="circulo-imagen draggable respuesta-asp respuesta-21" data-respuesta="asp"></span>
+                        <span class="circulo-imagen draggable respuesta-glu respuesta-22" data-respuesta="glu"></span>
+                        <span class="circulo-imagen draggable respuesta-gli respuesta-23" data-respuesta="gli"></span>
+                     </div>
+                  </div> <!-- .ejercicio2-parte2 -->
+
+                  <div id="ejercicio2-parte3" style="display:none;">
+
+                     <img src="img/cuadro_vacio.png" class="boton-imagen droppable rna-mensajero" data-respuesta="rna-mensajero">
+                     <img src="img/cuadro_vacio.png" class="boton-imagen droppable rna-transferencia" data-respuesta="rna-transferencia">
+                     <img src="img/cuadro_vacio.png" class="boton-imagen droppable traduccion" data-respuesta="traduccion">
+                     <img src="img/cuadro_vacio.png" class="boton-imagen droppable polipeptido" data-respuesta="polipeptido">
+
+                     <img src="img/C/circulos/molecula.png" class="texto-molecula">
+
+                     <div class="contenedor-draggables-1">
+                        <img src="img/C/cuadro_polipeptido.png" class="boton-imagen draggable polipeptido" data-respuesta="polipeptido">
+                        <img src="img/C/cuadro_RNAmensajero.png" class="boton-imagen draggable rna-mensajero" data-respuesta="rna-mensajero">
+                        <img src="img/C/cuadro_RNAtransferencia.png" class="boton-imagen draggable rna-transferencia" data-respuesta="rna-transferencia">
+                     </div>
+
+                     <img src="img/proceso.png" class="texto-proceso">
+
+                     <div class="contenedor-draggables-2">
+                        <img src="img/cuadro_replicacion.png" class="boton-imagen draggable replicacion" data-respuesta="replicacion">
+                        <img src="img/cuadro_traduccion.png" class="boton-imagen draggable traduccion" data-respuesta="traduccion">
+                        <img src="img/cuadro_transcripcion.png" class="boton-imagen draggable transcripcion" data-respuesta="transcripcion">
+                     </div>
+                  </div> <!-- #ejercicio2-parte3 -->
+
+
+                  <div id="ejercicio2-parte4" class="fondo-oscuro" style="display:none;">
+                     <div class="ventana">
+                        <div class="ventana-1">
+                           <h2>¡Excelente!</h2>
+                           <p>Ahora responde las siguientes preguntas.</p>
+                           <a href="#" class="siguiente-ventana"><img src="img/A/boton_siguiente.png"></a>
+                        </div>
+                        <div class="ventana-2 ventana-pregunta" data-pregunta="1" style="display:none;">
+                           <p>4. ¿Con qué nombre se le conoce al triplete de bases nitrogenadas que codifica para un aminoácido específico durante la síntesis de proteínas o determina el cese de la misma?</p>
+                           <ul>
+                              <li><label for="ej2p4-1"><input type="radio" name="ej2p4-1">adenina, guanina y citosina</label></li>
+                              <li><label for="ej2p4-1"><input type="radio" name="ej2p4-1">aminoácido</label></li>
+                              <li><label for="ej2p4-1"><input type="radio" name="ej2p4-1" data-correcta="1">codón</label></li>
+                              <li><label for="ej2p4-1"><input type="radio" name="ej2p4-1">anticodón</label></li>
+                           </ul>
+                        </div>
+                        <div class="ventana-3 ventana-pregunta" data-pregunta="2" style="display:none;">
+                           <p>5. ¿Qué aminoácido se integró al polipéptido gracias a la secuencia del séptimo codón del ARNm?</p>
+                           <ul>
+                              <li><label for="ej2p4-2"><input type="radio" name="ej2p4-2" data-correcta="1">ácido glutámico</label></li>
+                              <li><label for="ej2p4-2"><input type="radio" name="ej2p4-2">valina</label></li>
+                              <li><label for="ej2p4-2"><input type="radio" name="ej2p4-2">prolina</label></li>
+                              <li><label for="ej2p4-2"><input type="radio" name="ej2p4-2">lisina</label></li>
+                           </ul>
+                        </div>
+                        <div class="ventana-4 ventana-pregunta" data-pregunta="3" style="display:none;">
+                           <p>6. ¿Qué organelo celular presente en el citoplasma ayuda al ARNt en la traducción de la información del ARNm?</p>
+                           <ul>
+                              <li><label for="ej2p4-3"><input type="radio" name="ej2p4-3">mitocondria</label></li>
+                              <li><label for="ej2p4-3"><input type="radio" name="ej2p4-3">ADN</label></li>
+                              <li><label for="ej2p4-3"><input type="radio" name="ej2p4-3" data-correcta="1">ribosoma</label></li>
+                              <li><label for="ej2p4-3"><input type="radio" name="ej2p4-3">núcleo</label></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div> <!-- #ejercicio1-parte3 -->
+
+               </div>
+            </section>
+            <!-- FIN PANEL 3 -->
+
+
+            <!-- PANEL 3 -->
+            <section class="seccion seccion4 secc4 pantallaCompleta">
+               <div id="pantalla4">
+
+                  <ul id="scene4"
+                     data-scalar-x="18"
+                     data-scalar-y="18">
+                     <li class="layer" data-depth="0.20">
+                        <div><img style="position: relative;top: -15px;" src="img/C/fondo.png"></div>
+                     </li>
+                     <li class="layer" data-depth="1.00">
+                        <div class="capa-microscopio">
+                           <img src="img/A/microscopio2.png">
+                        </div>
+                     </li>
+                  </ul> <!-- #scene3 -->
+
+                  <div id="ejercicio3">
+
+                     <img src="img/B/ATTG.png" id="attg-imagen">
+
+                     <h3 class="titulo-ejercicio">Fragmento gen HbA</h3>
+
+                     <img src="img/C/casillas.png" class="bloque-casillas">
+
+                     <img src="img/C/flecha.png" class="flecha">
+
+                     <div class="bloque-respuestas">
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+
+                        <span class="fragmento droppable" data-respuesta="U"></span>
+                        <span class="fragmento droppable" data-respuesta="C"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                        <span class="fragmento droppable" data-respuesta="G"></span>
+                        <span class="fragmento droppable" data-respuesta="A"></span>
+                     </div>
+
+                     <img src="img/D/base_nitrogenada.png" class="base-nitrogenada-referencia">
+
+                     <span class="fragmento draggable respuesta-A" data-respuesta="A"></span>
+                     <span class="fragmento draggable respuesta-C" data-respuesta="C"></span>
+                     <span class="fragmento draggable respuesta-G" data-respuesta="G"></span>
+                     <span class="fragmento draggable respuesta-U" data-respuesta="U"></span>
+
+                     <div class="circulos-vacio">
+                        <span class="circulo-imagen droppable" data-respuesta="met"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="val"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="his"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="leu"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="tre"></span>
+
+                        <span class="circulo-imagen droppable" data-respuesta="pro"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="lis"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="glu"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="glu"></span>
+                        <span class="circulo-imagen droppable" data-respuesta="ser"></span>
+                     </div>
+
+                  </div> <!-- #ejercicio2 -->
+
+                  <div id="ejercicio3-parte2" style="display:none;">
+
+                     <img src="img/C/tabla.png" class="tabla-mini">
+
+                     <div class="tabla-grande" style="display:none;">
+                     </div>
+                     <div class="circulo-imagen-container" style="display:none;">
+                        <span class="circulo-imagen draggable respuesta-fen respuesta-1" data-respuesta="fen"></span>
+                        <span class="circulo-imagen draggable respuesta-leu respuesta-2" data-respuesta="leu"></span>
+                        <span class="circulo-imagen draggable respuesta-ser respuesta-3" data-respuesta="ser"></span>
+                        <span class="circulo-imagen draggable respuesta-tir respuesta-4" data-respuesta="tir"></span>
+                        <span class="circulo-imagen draggable respuesta-cis respuesta-5" data-respuesta="cis"></span>
+                        <span class="circulo-imagen draggable respuesta-trp respuesta-6" data-respuesta="trp"></span>
+                        <span class="circulo-imagen draggable respuesta-leu respuesta-7" data-respuesta="leu"></span>
+                        <span class="circulo-imagen draggable respuesta-pro respuesta-8" data-respuesta="pro"></span>
+                        <span class="circulo-imagen draggable respuesta-his respuesta-9" data-respuesta="his"></span>
+                        <span class="circulo-imagen draggable respuesta-gln respuesta-10" data-respuesta="gln"></span>
+                        <span class="circulo-imagen draggable respuesta-arg respuesta-11" data-respuesta="arg"></span>
+                        <span class="circulo-imagen draggable respuesta-ile respuesta-12" data-respuesta="ile"></span>
+                        <span class="circulo-imagen draggable respuesta-met respuesta-13" data-respuesta="met"></span>
+                        <span class="circulo-imagen draggable respuesta-tre respuesta-14" data-respuesta="tre"></span>
+                        <span class="circulo-imagen draggable respuesta-asn respuesta-15" data-respuesta="asn"></span>
+                        <span class="circulo-imagen draggable respuesta-lis respuesta-16" data-respuesta="lis"></span>
+                        <span class="circulo-imagen draggable respuesta-ser respuesta-17" data-respuesta="ser"></span>
+                        <span class="circulo-imagen draggable respuesta-arg respuesta-18" data-respuesta="arg"></span>
+                        <span class="circulo-imagen draggable respuesta-val respuesta-19" data-respuesta="val"></span>
+                        <span class="circulo-imagen draggable respuesta-ala respuesta-20" data-respuesta="ala"></span>
+                        <span class="circulo-imagen draggable respuesta-asp respuesta-21" data-respuesta="asp"></span>
+                        <span class="circulo-imagen draggable respuesta-glu respuesta-22" data-respuesta="glu"></span>
+                        <span class="circulo-imagen draggable respuesta-gli respuesta-23" data-respuesta="gli"></span>
+                     </div>
+                  </div> <!-- .ejercicio2-parte2 -->
+
+
+                  <div id="ejercicio3-parte3" class="fondo-oscuro" style="display:none;">
+                     <div class="ventana">
+                        <div class="ventana-1">
+                           <h2>¡Excelente!</h2>
+                           <p>Ahora responde las siguientes preguntas.</p>
+                           <a href="#" class="siguiente-ventana"><img src="img/A/boton_siguiente.png"></a>
+                        </div>
+                        <div class="ventana-2 ventana-pregunta" data-pregunta="1" style="display:none;">
+                           <p>7. ¿Cuántos aminoácidos cambian en el polipéptido generado a partir de la secuencia con la mutación?</p>
+                           <ul>
+                              <li><label for="ej3p3-1"><input type="radio" name="ej3p3-1">tres</label></li>
+                              <li><label for="ej3p3-1"><input type="radio" name="ej3p3-1" data-correcta="1">uno</label></li>
+                              <li><label for="ej3p3-1"><input type="radio" name="ej3p3-1">todos</label></li>
+                              <li><label for="ej3p3-1"><input type="radio" name="ej3p3-1">dos</label></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div> <!-- #ejercicio3-parte3 -->
+
+                  <div id="ejercicio3-parte4" class="fondo-oscuro" style="display:none;">
+                     <div class="ventana">
+                        <div class="ventana-1">
+                           <p>Un pequeño cambio grandes consecuencias, ¿verdad?</p>
+                           <p>Si quieres conocer mas acerca de los síntomas de la anemia falsiforme y su importancia en la evolución del ser humano, pulsa el ícono.</p>
+                           <a href="#" class="boton-play-ultimo"><img src="img/A/boton_play.png"></a>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div id="ejercicio3-parte5" class="fondo-oscuro-2" style="display:none;">
+                     <div id="ytplayer2"></div>
+                  </div>
+               </div>
+            </section>
+            <!-- FIN PANEL 4 -->
+
+
+         </div> <!-- fin panelReel -->
+      </div><!-- fin activity -->
+
+      <audio src="audio/success.mp3" id="sonido-suceso" style="display:none;"></audio>
+      <audio src="audio/error.mp3" id="sonido-error" style="display:none;"></audio>
+
+      <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+      <script type="text/javascript" src="js/plugins/jquery-ui-1.10.3.custom.min.js"></script>
+      <script type="text/javascript" src="js/plugins/jquery.animate-enhanced.min.js"></script>
+      <script type="text/javascript" src="js/plugins/klokAlinear.plugin.js"></script>
+      <script type="text/javascript" src="js/plugins/klokMenuFalso.plugin.js"></script>
+      <script type="text/javascript" src="js/plugins/resize.plugin.js"></script>
+      <script type="text/javascript" src="js/plugins/jquery.parallax.js"></script>
+      <script type="text/javascript" src="js/klok.js"></script>
+   </body>
+</html>
