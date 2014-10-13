@@ -7,6 +7,7 @@
       <title></title>
       <link rel="stylesheet" href="../../common/css/interfaz.css" type="text/css" />
       <link rel="stylesheet" href="css/activity.css"  type="text/css" />
+      <link rel="stylesheet" href="css/jquery-ui.css"  type="text/css" />
       <link rel="stylesheet" href="css/klok.css"  type="text/css" />
       <script src="../../common/js/jquery-1.8.1.min.js" type="text/javascript"></script>
       <script type="text/javascript" src="config.js"></script>
@@ -14,7 +15,6 @@
       <script type="text/javascript" src="../../common/js/interfaz.js"></script>
       <script type="text/javascript" src="../../common/js/multipanel.js"></script>
 	  <script type="text/javascript" src="js/generales.js"></script>
-	  <script type="text/javascript" src="js/klok.js"></script>	
    </head>
    <body>
       <div id="activity">
@@ -22,16 +22,239 @@
          <div id="panelReel">
 
             <!-- PANEL 1 -->
-            <section class="section1">
-            	
+            <section class="seccion section1 secc1 pantallaCompleta">
+               <div id="pantallaUno" class="pantalla">
+
+                  <div class="texto-1">
+                     <p>El estado de agregación de una sustancia es resultado de la interacción de las partículas que lo conforman. Por un lado, su energía cinética, relacionada con la temperatura, tiende a separarlas; mientras que, las fuerzas intermoleculares tienden a cohesionarlas.</p>
+                  </div>
+
+                  <div id="vaso-contenedor">
+                     <div id="vaso" class="liquido"></div>
+                  </div>
+
+                  <div id="controles">
+                     <div id="slider-temperatura"></div>
+                     <div id="slider-fuerza"></div>
+                  </div>
+
+               </div> <!-- #pantallaUno -->
+
+               <div id="pantallaDos" class="pantalla" style="display:none;">
+                  <div class="botonera">
+                     <span id="btnIntermoleculares" class="btn">Fuerzas intermoleculares</span>
+                     <span id="btnVanderwaals" class="btn">Fuerza de Van Der Waals</span>
+                     <span id="btnIondipolo" data-id="iondipolo" class="btn">Fuerzas Ion-dipolo</span>
+
+                     <div class="contenedor-botones-izquierda" style="display:none;">
+
+                        <span id="btnDispersion" data-id="dispersion" class="btn">Fuerzas de dispersión de London</span>
+                        <span id="btnDipolodipolo" data-id="dipolodipolo" class="btn">Fuerzas Dipolo-dipolo</span>
+                        <span id="btnPuentes" data-id="puentes" class="btn">Puentes de hidrógeno</span>
+
+                     </div> <!-- .contenedor-botones-izquierda -->
+                  </div> <!-- .botonera -->
+               </div> <!-- #pantallaDos -->
+
+               <div id="pantallaTres" class="pantalla" style="display:none;">
+
+                  <div class="preguntas">
+
+                     <div class="pregunta" data-pregunta="1">
+                        <div class="texto">
+                           <span class="num">1</span>
+                           Los halógenos (F<sub>2</sub>, Cl<sub>2</sub>, Br<sub>2</sub>, I<sub>2</sub>) son sustancias no polares, ¿Cuál de ellos es más probable que esté en estado sólido a temperatura ambiente?</div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1">Yodo</div>
+                           <div class="opcion" data-correcta="0">Flúor</div>
+                           <div class="opcion" data-correcta="0">Bromo</div>
+                           <div class="opcion" data-correcta="0">Cloro</div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta" data-pregunta="2">
+                        <div class="texto">
+                           <span class="num">2</span>
+                           Debido a qué tipo de fuerza intermolecular se puede explicar que el yodo sublime.</div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1">Fuerzas de dispersión de London</div>
+                           <div class="opcion" data-correcta="0">Puentes de hidrógeno</div>
+                           <div class="opcion" data-correcta="0">Fuerzas dipolo-dipolo</div>
+                           <div class="opcion" data-correcta="0">Fuerzas ion-dipolo</div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta" data-pregunta="3">
+                        <div class="texto">
+                           <span class="num">3</span>
+                           Al mezclar etanol (CH<sub>3</sub>CH<sub>2</sub>OH) y agua (H<sub>2</sub>O), el volumen resultante de la disolución es menor que la suma de los volúmenes de cada sustancia antes de mezclase. ¿Con qué fuerza intermolecular se podría explicar este hecho?</div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1">Puentes de hidrógeno</div>
+                           <div class="opcion" data-correcta="0">Fuerzas de dispersión de London</div>
+                           <div class="opcion" data-correcta="0">Fuerzas dipolo-dipolo</div>
+                           <div class="opcion" data-correcta="0">Fuerzas ion-dipolo</div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta" data-pregunta="4">
+                        <div class="texto">
+                           <span class="num">4</span>
+                           ¿Cuál de las siguientes sustancias no polares tendrá el menor punto de fusión y ebullición?</div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1">Metano (CH<sub>4</sub>)</div>
+                           <div class="opcion" data-correcta="0">Etano (CH<sub>3</sub>CH<sub>3</sub>)</div>
+                           <div class="opcion" data-correcta="0">Propano (CH<sub>3</sub>CH<sub>2</sub>CH<sub>3</sub>)</div>
+                           <div class="opcion" data-correcta="0">Butano (CH<sub>3</sub>CH<sub>2</sub> CH<sub>2</sub>CH<sub>3</sub>)</div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta" data-pregunta="5">
+                        <div class="texto">
+                           <span class="num">5</span>
+                           Las siguientes moléculas tienen la misma masa molecular, ¿cuál de ellas tendrá el menor punto de fusión y ebullición? </div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1"><img src="img/imagen1.png" /></div>
+                           <div class="opcion" data-correcta="0"><img src="img/imagen2.png" /></div>
+                           <div class="opcion" data-correcta="0"><img src="img/imagen3.png" /></div>
+                           <div class="opcion" data-correcta="0"><img src="img/imagen4.png" /></div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta pregunta-grande" data-pregunta="6">
+                        <div class="texto">
+                           <span class="num">6</span>
+                           Se dice que lo similar disuelve a lo similar, esto significa que las sustancias polares son solubles en disolventes polares y las no polares, en disolventes no polares. ¿Cómo puedes explicar con las fuerzas intermoleculares este hecho?</div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1">Las fuerzas dipolo-dipolo son más fuertes que las fuerzas de dispersión de London, por lo que estas últimas no pueden romper la fuerzas de atracción entre las sustancias polares.</div>
+                           <div class="opcion" data-correcta="0">Las fuerzas de dispersión de London son más fuertes que las fuerzas dipolo-dipolo, por lo que estas últimas no pueden romper las fuerzas de atracción entre las sustancias no polares.</div>
+                           <div class="opcion" data-correcta="0">Las fuerzas ion-dipolos son las fuerzas intermoleculares más fuertes, por lo que las fuerzas dipolo-dipolo no pueden romper esta interacción. </div>
+                           <div class="opcion" data-correcta="0">Los puentes de hidrógeno son más fuertes que las fuerzas dipolo-dipolo, por lo que estas últimas no pueden romper los puentes de hidrógeno de las sustancias polares. </div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta" data-pregunta="7">
+                        <div class="texto">
+                           <span class="num">7</span>
+                           ¿Con cuál de las siguientes sustancias al disolverse en agua puede presentarse una fuerza ion-dipolo? </div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1">Cloruro de magnesio (MgCl<sub>2</sub>)</div>
+                           <div class="opcion" data-correcta="0">Cloruro de metilo (CH<sub>3</sub>Cl)</div>
+                           <div class="opcion" data-correcta="0">Metano (CH<sub>3</sub>OH)</div>
+                           <div class="opcion" data-correcta="0">Acetona (CH<sub>3</sub>COCH<sub>3</sub>) </div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta" data-pregunta="8">
+                        <div class="texto">
+                           <span class="num">8</span>
+                           ¿Cuál de los siguientes compuestos puede formar puentes de hidrogeno? </div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1">Metano (CH<sub>3</sub>OH)</div>
+                           <div class="opcion" data-correcta="0">Acetona (CH<sub>3</sub>COCH<sub>3</sub>)</div>
+                           <div class="opcion" data-correcta="0">Eter (CH<sub>3</sub>OCH<sub>3</sub>)</div>
+                           <div class="opcion" data-correcta="0">Propano (CH<sub>3</sub>CH<sub>2</sub>CH<sub>3</sub>)</div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta" data-pregunta="9">
+                        <div class="texto">
+                           <span class="num">9</span>
+                           ¿Cuál es el elemento con menor punto de fusión y ebullición de todos los que existen?  </div>
+                        <div class="opciones">
+                           <div class="opcion" data-correcta="1">He</div>
+                           <div class="opcion" data-correcta="0">H<sub>2</sub></div>
+                           <div class="opcion" data-correcta="0">N<sub>2</sub></div>
+                           <div class="opcion" data-correcta="0">O<sub>2</sub></div>
+                        </div>
+                     </div> <!-- .pregunta -->
+
+                     <div class="pregunta" data-pregunta="10">
+                        <div class="texto">
+                           <span class="num">10</span>
+                           Observa la gráfica. ¿Con que fuerza intermolecular puedes explicar el comportamiento peculiar del agua (H<sub>2</sub>0),  fluoruro de hidrógeno (HF) y amoniaco (NH<sub>3</sub>)?</div>
+                        <div class="opciones">
+                           <div class="opcion chica" data-correcta="1">Puentes de hidrógeno</div>
+                           <div class="opcion chica" data-correcta="0">Dipolo-dipolo</div>
+                           <div class="opcion chica" data-correcta="0">Ion-dipolo</div>
+                           <div class="opcion chica" data-correcta="0">Fuerzas de dispersión de London</div>
+                        </div>
+
+                        <img src="img/grafica.png" id="grafico1">
+                     </div> <!-- .pregunta -->
+
+                  </div>
+
+                  <div id="finale" class="bien" style="display:none;">
+                     <span class="cerrar"></span>
+                     <div class="mal">
+                        <img src="img/botones/tache.png">
+                        <p>Has tenido <i class="respuestas-correctas"></i> aciertos de 10. Reinicia la actividad e intenta otra vez.</p>
+                     </div>
+
+                     <div class="bien">
+                        <img src="img/botones/palomita.png">
+                        <p>¡Bien! Has tenido <i class="respuestas-correctas"></i> aciertos de 10. Relacionas la fuerzas intermoleculares con las propiedades físicas de las sustancias.
+Has concluido la actividad.
+</p>
+                     </div>
+                  </div>
+
+               </div> <!-- #pantallaTres -->
+
+               <div class="movimiento">
+                  <a href="#" class="atras" style="display:none;"></a>
+                  <a href="#" class="adelante"></a>
+               </div>
+
+               <div class="ventana" data-id="iondipolo">
+                  <span class="cerrar"></span>
+                  <h3 class="titulo">Fuerzas ion-dipolo</h3>
+                  <div class="texto">
+                     <p>Este tipo de fuerzas intermoleculares se presenta en disoluciones de un compuesto iónico en un disolvente polar. En esta mezcla, las moléculas del disolvente polar se orientan de tal modo que la parte parcial positiva interactúa con el ion con carga negativa; mientras que la parte parcial negativa, interactúa con el ion con carga positiva. Esta fuerza intermolecular es más fuerte que todas las demás. </p>
+                  </div>
+               </div>
+
+               <div class="ventana" data-id="dispersion">
+                  <span class="cerrar"></span>
+                  <h3 class="titulo">Fuerzas de Dispersión de London</h3>
+                  <div class="texto">
+                     <p>Este tipo de interacciones es la que permite que las sustancias no polares, o disoluciones de ellas, tengas estados condensados. Se debe a la deformación momentánea de la nube electrónica de un átomo o molécula  por la presencia de la nube de otra muy cercana. A esta deformación se le llama polarización. Entre mayor sea la polarización, mayor será la fuerza de atracción entre ellas. </p>
+
+                     <p>La polarización de un átomo o una molécula depende de varios factores. A continuación se mencionan algunos:</p>
+
+                     <ul>
+                        <li>Si las moléculas o los átomos están muy cercana entre sí, existe mayor repulsión entre sus nubes electrónicas, por lo que se polarizan más que si estuvieran más alejados.</li>
+                        <li>Una sustancia con mayor masa atómica o molecular, tiene más electrones, por lo que no son atraídos fuertemente por el núcleo, esto ocasiona que el átomo o molécula sea más polarizable.</li>
+                        <li>La forma de la molécula también influye en su polarización. Una molécula alargada y lineal tiene mayor superficie que una compacta y ramificada, por ende, la primera es más polarizable.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="ventana" data-id="dipolodipolo">
+                  <span class="cerrar"></span>
+                  <h3 class="titulo">Fuerzas dipolo-dipolo</h3>
+                  <div class="texto">
+                     <p>En las moléculas polares la distribución de la nube electrónica es desigual. En ellas hay una región en la que hay deficiencia de nube electrónica, por lo que se dice que tiene carga parcial positiva; mientras que en otra región hay exceso de nube electrónica, por lo que tiene una carga parcial negativa. Estas moléculas, ya sea en sustancias o en disoluciones, se orientan de modo que la carga parcial positiva de una molécula interactúa con la carga parcial negativa de otras. Como en este tipo de fuerzas intermoleculares se dan entre dipolos permanentes, son más fuertes que las fuerzas de dispersión de London. </p>
+                  </div>
+               </div>
+
+               <div class="ventana" data-id="puentes">
+                  <span class="cerrar"></span>
+                  <h3 class="titulo">Puentes de hidrógeno</h3>
+                  <div class="texto">
+                     <p>Este tipo de fuerza intermolecular se da entre un átomo de hidrógeno de una molécula con un átomo con pares libres de otra molécula. Por lo general, los átomos que pueden formar puentes con el hidrógeno son oxígeno, nitrógeno y flúor. Este tipo de fuerza intermolecular es más fuerte que la dipolo-dipolo.</p>
+                  </div>
+               </div>
+
             </section>
-            <!-- FIN PANEL 1 -->        
-         </div> <!-- fin panelReel -->      
+            <!-- FIN PANEL 1 -->
+         </div> <!-- fin panelReel -->
       </div><!-- fin activity -->
-      <script type="text/javascript" src="js/plugins/jquery-ui-1.10.3.custom.min.js"></script>	
+      <script type="text/javascript" src="js/plugins/jquery-ui-1.10.3.custom.min.js"></script>
       <script type="text/javascript" src="js/plugins/jquery.animate-enhanced.min.js"></script>
       <script type="text/javascript" src="js/plugins/klokAlinear.plugin.js"></script>
       <script type="text/javascript" src="js/plugins/klokMenuFalso.plugin.js"></script>
-      <script type="text/javascript" src="js/plugins/resize.plugin.js"></script>		 
+      <script type="text/javascript" src="js/plugins/resize.plugin.js"></script>
+      <script type="text/javascript" src="js/klok.js"></script>
    </body>
 </html>

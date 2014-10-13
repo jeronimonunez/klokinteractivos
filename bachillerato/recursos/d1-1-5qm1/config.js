@@ -1,10 +1,10 @@
-﻿titulo = "Título del recurso";
+﻿titulo = "Más atracción, menos dispersión";
 
 // biologia // etimologias // fisica // geografia // historiamex // historiauniv // sociales // literatura // matematicas // quimica
-asignatura = "historiamex";  // con minúsculas, sin caracteres especiales ni espacios
+asignatura = "quimica";  // con minúsculas, sin caracteres especiales ni espacios
 
 // texto de introducción
-intro = 'Texto breve que provoque curiosidad para estudiar el tema.';
+intro = 'Además de las condiciones ambientales, ¿sabe qué otro factor determina el estado de agregación de las sustancias?';
 
 // 'info' 'ayuda' 'nuevo' etc...
 botones = ['anterior','siguiente','documento','instruccion','pausa','reproducir'];
@@ -19,7 +19,7 @@ var paneles = [
 /// agregar o quitar segmentos  entre corchetes, según el número de sections que tenga el html.
 /// separar  con comas.  ejemplo: {...}, {...}, {...}
 {//panel 1
-	"instrucciones" : "Instrucciones generales para esta pantalla: <i>long established</i> fact that a reader will be distracted by the readable content of a page when looking at its layout.", // opcional, si no se ocupa quitar todo el renglón
+	"instrucciones" : "Desliza la barra de temperatura y observa en que puntos cambia el estado de agregación dentro del vaso de precipitados. Después, incrementa la fuerza intermolecular y observa cómo se modifican los puntos de fusión y ebullición.", // opcional, si no se ocupa quitar todo el renglón
 	"bloqueado" : false //true o false
 },
 
