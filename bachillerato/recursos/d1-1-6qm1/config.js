@@ -1,10 +1,10 @@
-﻿titulo = "Título del recurso";
+﻿titulo = "La importancia de llamarse...";
 
 // biologia // etimologias // fisica // geografia // historiamex // historiauniv // sociales // literatura // matematicas // quimica
-asignatura = "historiamex";  // con minúsculas, sin caracteres especiales ni espacios
+asignatura = "quimica";  // con minúsculas, sin caracteres especiales ni espacios
 
 // texto de introducción
-intro = 'Texto breve que provoque curiosidad para estudiar el tema.';
+intro = 'Cada día hay nuevas sustancias, ¿conoces las reglas para nombrarlas? ¿Sabes quíen es quien regula estas reglas?';
 
 // 'info' 'ayuda' 'nuevo' etc...
 botones = ['anterior','siguiente','documento','instruccion','pausa','reproducir'];
@@ -13,13 +13,13 @@ botones = ['anterior','siguiente','documento','instruccion','pausa','reproducir'
 //Agregar  los gráficos de los botones en formato png a la carpeta 'img-html'*/
 
 centrar =  true  //centrar automáticamente el interactivo, true o false
-transicion = 'vertical' // horizontal // vertical //fade
+transicion = 'horizontal' // horizontal // vertical //fade
 
 var paneles = [
 /// agregar o quitar segmentos  entre corchetes, según el número de sections que tenga el html.
 /// separar  con comas.  ejemplo: {...}, {...}, {...}
 {//panel 1
-	"instrucciones" : "Instrucciones generales para esta pantalla: <i>long established</i> fact that a reader will be distracted by the readable content of a page when looking at its layout.", // opcional, si no se ocupa quitar todo el renglón
+	"instrucciones" : "Arrastra la hacia arriba y lee la información.", // opcional, si no se ocupa quitar todo el renglón
 	"bloqueado" : false //true o false
 },
 

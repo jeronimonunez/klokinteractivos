@@ -1,6 +1,11 @@
+.seccion div {
+    box-sizing: border-box;
+}
+
 .seccion{
 	background-repeat: no-repeat;
 	background-position: center center;
+    font-family: Trade;
 }
 
 .pantallaCompleta{
@@ -10,4 +15,215 @@
 	top: 0px;
 	left: 0px;
 	display: block;
+}
+
+/* Interactivo quimica */
+.piso {
+    position: relative;
+    height: 418px;
+    font-family: Trade;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    -webkit-transition: background 600ms ease;
+    -moz-transition: background 600ms ease;
+    -ms-transition: background 600ms ease;
+    -o-transition: background 600ms ease;
+    transition: background 600ms ease;
+}
+.piso:hover {
+    background-size: 120%;
+    background-position: 20% 20%;
+}
+
+.piso .texto {
+    width: 60%;
+    float: left;
+    /*background: #000;*/
+    color: white;
+    height: 418px;
+    padding: 190px 40px 20px 60px;
+}
+
+.piso:nth-child(2n+2) .texto {
+    float: right;
+    padding: 190px 60px 20px 40px;
+}
+
+.piso .texto p{
+    font-size: 13px;
+}
+.piso .texto h2{
+    display: none;
+}
+
+.piso .wrapper {
+    width: 100%;
+    height: 418px;
+}
+
+#piso-1 { background-image: url(../img/A/001.png); }
+#piso-2 { background-image: url(../img/A/002.png); }
+#piso-3 { background-image: url(../img/A/003.png); }
+#piso-4 { background-image: url(../img/A/004.png); }
+#piso-5 { background-image: url(../img/A/005.png); }
+#piso-6 { background-image: url(../img/A/006.png); }
+#piso-7 { background-image: url(../img/A/007.png); }
+#piso-8 { background-image: url(../img/A/008.png); }
+#piso-9 { background-image: url(../img/A/009.png); }
+#piso-10 { background-image: url(../img/A/010.png); }
+#piso-11 { background-image: url(../img/A/011.png); }
+#piso-12 { background-image: url(../img/A/012.png); }
+#piso-13 { background-image: url(../img/A/013.png); }
+#piso-14 { background-image: url(../img/A/014.png); }
+#piso-15 { background-image: url(../img/A/015.png); }
+#piso-16 { background-image: url(../img/A/016.png); }
+#piso-17 { background-image: url(../img/A/017.png); }
+#piso-18 { background-image: url(../img/A/018.png); }
+#piso-19 { background-image: url(../img/A/019.png); }
+#piso-20 { background-image: url(../img/A/020.png); }
+
+#piso-1 .wrapper { background-image: url(../img/A/001-01.png); }
+#piso-2 .wrapper { background-image: url(../img/A/002-01.png); }
+#piso-3 .wrapper { background-image: url(../img/A/003-01.png); }
+#piso-4 .wrapper { background-image: url(../img/A/004-01.png); }
+#piso-5 .wrapper { background-image: url(../img/A/005-01.png); }
+#piso-6 .wrapper { background-image: url(../img/A/006-01.png); }
+#piso-7 .wrapper { background-image: url(../img/A/007-01.png); }
+#piso-8 .wrapper { background-image: url(../img/A/008-01.png); }
+#piso-9 .wrapper { background-image: url(../img/A/009-01.png); }
+#piso-10 .wrapper { background-image: url(../img/A/010-01.png); }
+#piso-11 .wrapper { background-image: url(../img/A/011-01.png); }
+#piso-12 .wrapper { background-image: url(../img/A/012-01.png); }
+#piso-13 .wrapper { background-image: url(../img/A/013-01.png); }
+#piso-14 .wrapper { background-image: url(../img/A/014-01.png); }
+#piso-15 .wrapper { background-image: url(../img/A/015-01.png); }
+#piso-16 .wrapper { background-image: url(../img/A/016-01.png); }
+#piso-17 .wrapper { background-image: url(../img/A/017-01.png); }
+#piso-18 .wrapper { background-image: url(../img/A/018-01.png); }
+#piso-19 .wrapper { background-image: url(../img/A/019-01.png); }
+#piso-20 .wrapper { background-image: url(../img/A/020-01.png); }
+
+#lineaTiempo {
+    width: 790px;
+    height: 560px;
+    overflow-y:scroll;
+}
+
+.boton-siguiente {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.boton-siguiente img {
+    cursor: pointer;
+}
+
+.section2 {
+    background: url(../img/B_fondo.png) 0 0 no-repeat;
+}
+#objetivo {
+    width: 600px;
+    height: 431px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -215px;
+    margin-left: -300px;
+    color: white;
+    background: rgba(0,0,0,.8);
+    box-shadow: 0 0 10px #000;
+    padding: 20px;
+}
+#objetivo p {
+    margin-bottom: 1em;
+}
+
+.section3 {
+    background: url(../img/C_fondo.png) 0 0 no-repeat;
+}
+
+.moviles {
+    width: 140px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 542px;
+}
+
+.moviles img {
+    position: absolute;
+    left: 0;
+}
+.moviles img:nth-child(1) { top: 0; }
+.moviles img:nth-child(2) { top: 54px; }
+.moviles img:nth-child(3) { top: 108px; }
+.moviles img:nth-child(4) { top: 162px; }
+.moviles img:nth-child(5) { top: 216px; }
+
+.moviles img:nth-child(6) { top: 270px; }
+.moviles img:nth-child(7) { top: 324px; }
+.moviles img:nth-child(8) { top: 378px; }
+.moviles img:nth-child(9) { top: 432px; }
+.moviles img:nth-child(10) { top: 486px; }
+
+.fijos {
+    width: 340px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.fijos img {
+    float: right;
+}
+
+.droppables {
+    position: absolute;
+    width: 140px;
+    top: 10px;
+    left: 300px;
+}
+
+span.droppable {
+    width: 132px;
+    height: 54px;
+    display: block;
+    float: left;
+    background: url(../img/droppable.png) 0 0 no-repeat;
+}
+
+.ventana {
+    position: absolute;
+    background: rgba(0,0,0,.7);
+    width: 790px;
+    height: 560px;
+    color: white;
+}
+
+.ventana span.cerrar {
+    font-size: 44px;
+    text-transform: lowercase;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    width: 50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.retroalimentacion {
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 450px;
+    padding: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -225px;
 }
