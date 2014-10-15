@@ -70,8 +70,12 @@ var DISPERSION = {
         });
 
         $("#finale .cerrar").click(function() {
-            self.iniciarPreguntas(true);
-            $(this).parent().fadeOut();
+            if($("#finale").hasClass("bien")) {
+                location.reload();
+            } else {
+                self.iniciarPreguntas(true);
+                $(this).parent().fadeOut();
+            }
         });
     },
 
