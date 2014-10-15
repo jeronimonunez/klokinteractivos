@@ -308,6 +308,7 @@ span.num {
     left: 0px;
     padding: 250px 200px 0;
     color: white;
+    z-index: 9999;
 }
 #finale.bien {
     background: rgba(0,0,0,.7) url(../img/botones/correcto.png) 0 0 no-repeat;

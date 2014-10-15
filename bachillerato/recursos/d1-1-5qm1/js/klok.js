@@ -119,21 +119,31 @@ var DISPERSION = {
         self.$preguntas.hide();
         self.preguntasCorrectas = 0;
         $(self.$preguntas.selector + "[data-pregunta='1']").show();
+        self.$preguntas.find(".opcion").removeClass("clicked activa");
 
         if(reload != true) {
             self.$preguntas.find(".opcion").click(function() {
-                if($(this).attr("data-correcta") == 1) {
+                var $op = $(this);
+                if($op.hasClass("clicked")) return;
+                $op.addClass("clicked activa");
+                $op.siblings().addClass("clicked");
+                if($op.attr("data-correcta") == 1) {
                     self.preguntasCorrectas++;
                 }
                 if(self.posicionEjercicio == 10) {
                     self.grandFinale();
                     return;
                 }
-                $(".pregunta[data-pregunta='"+self.posicionEjercicio+"']").fadeOut();
-                self.posicionEjercicio++;
-                $(".pregunta[data-pregunta='"+self.posicionEjercicio+"']").fadeIn();
+                setTimeout(function() {
+                    $(".pregunta[data-pregunta='"+self.posicionEjercicio+"']").fadeOut(300,function(){
+                        self.posicionEjercicio++;
+                        $(".pregunta[data-pregunta='"+self.posicionEjercicio+"']").fadeIn();
+                    });
+                },500);
+            });
 
-                console.log(self.preguntasCorrectas);
+            self.$preguntas.each(function() {
+                $(this).find(".opcion").shuffle();
             });
         }
     },
@@ -141,8 +151,6 @@ var DISPERSION = {
     grandFinale: function() {
         var self = this,
             $finale = $("#finale");
-
-        console.log(self.preguntasCorrectas);
 
         if(self.preguntasCorrectas > 8) {
             $finale.addClass("bien").removeClass("mal");
@@ -190,7 +198,32 @@ var DISPERSION = {
 
     }
 
-}
+};
+
+(function($){
+
+    $.fn.shuffle = function() {
+
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
+
+        this.each(function(i){
+            $(this).replaceWith($(shuffled[i]));
+        });
+
+        return $(shuffled);
+
+    };
+
+})(jQuery);
 
 $(function() {
     DISPERSION.init();
