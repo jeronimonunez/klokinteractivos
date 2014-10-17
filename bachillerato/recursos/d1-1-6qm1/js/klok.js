@@ -26,7 +26,18 @@ var NOMBREAPP = {
 
         $(".draggable").shuffle();
 
-        $(".draggable").draggable();
+        $(".draggable:gt(9)").hide().addClass("not-today");
+
+        $(".draggable.not-today").each(function() {
+            var that = $(this),
+                d = that.attr("data-correcto");
+            $(".droppable[data-correcto='"+d+"']").hide();
+            $(".fijos img[data-correcto='"+d+"']").hide();
+        });
+
+        $(".draggable:lt(10)").draggable({
+            revert: "invalid"
+        });
 
         $(".droppable").droppable({
             drop: function(event, ui) {
@@ -41,11 +52,21 @@ var NOMBREAPP = {
 
                     $drag.draggable("option", "revert", true);
                     setTimeout(function() {
-                        $drag.draggable("option", "revert", false);
+                        $drag.draggable("option", "revert", "invalid");
                     }, 300);
                 }
             }
-        })
+        });
+
+        $("#activity").css({"z-index": "auto"});
+
+        var s = skrollr.init({
+            documentElement : "lineaTiempo",
+            render: function(data) {
+                //Debugging - Log the current scroll position.
+                // console.log(data.curTop);
+            }
+        });
     }
 };
 

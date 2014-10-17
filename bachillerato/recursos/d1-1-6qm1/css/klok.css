@@ -1,3 +1,5 @@
+body{height:100% !important;}
+
 .seccion div {
     box-sizing: border-box;
 }
@@ -20,10 +22,12 @@
 /* Interactivo quimica */
 .piso {
     position: relative;
-    height: 418px;
+    height: 350px;
     font-family: Trade;
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
 
     -webkit-transition: background 600ms ease;
     -moz-transition: background 600ms ease;
@@ -31,17 +35,17 @@
     -o-transition: background 600ms ease;
     transition: background 600ms ease;
 }
-.piso:hover {
+/*.piso:hover {
     background-size: 120%;
     background-position: 20% 20%;
 }
-
+*/
 .piso .texto {
-    width: 60%;
+    width: 70%;
     float: left;
     /*background: #000;*/
     color: white;
-    height: 418px;
+    height: 350px;
     padding: 190px 40px 20px 60px;
 }
 
@@ -51,7 +55,7 @@
 }
 
 .piso .texto p{
-    font-size: 13px;
+    font-size: 12px;
 }
 .piso .texto h2{
     display: none;
@@ -59,7 +63,12 @@
 
 .piso .wrapper {
     width: 100%;
-    height: 418px;
+    height: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.piso:nth-child(2n+2) .wrapper {
+    background-position: 100% 0;
 }
 
 #piso-1 { background-image: url(../img/A/001.png); }
@@ -131,10 +140,11 @@
     left: 50%;
     margin-top: -215px;
     margin-left: -300px;
-    color: white;
-    background: rgba(0,0,0,.8);
-    box-shadow: 0 0 10px #000;
+    /*color: white;*/
+    /*background: rgba(0,0,0,.8);
+    box-shadow: 0 0 10px #000;*/
     padding: 20px;
+    background: transparent url(../img/popUp.png) 0 0 no-repeat;
 }
 #objetivo p {
     margin-bottom: 1em;
@@ -191,7 +201,7 @@ span.droppable {
     height: 54px;
     display: block;
     float: left;
-    background: url(../img/droppable.png) 0 0 no-repeat;
+    background: url(../img/c_cuadroRespuesta.png) 0 0 no-repeat;
 }
 
 .ventana {
