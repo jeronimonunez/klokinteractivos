@@ -25,8 +25,8 @@ body{height:100% !important;}
     height: 350px;
     font-family: Trade;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-attachment: fixed;
+    background-position: 0 0;
+    /*background-attachment: fixed;*/
     background-size: cover;
 
     -webkit-transition: background 600ms ease;

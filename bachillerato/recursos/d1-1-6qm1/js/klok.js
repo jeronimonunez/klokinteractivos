@@ -60,13 +60,38 @@ var NOMBREAPP = {
 
         $("#activity").css({"z-index": "auto"});
 
-        var s = skrollr.init({
-            documentElement : "lineaTiempo",
-            render: function(data) {
-                //Debugging - Log the current scroll position.
-                // console.log(data.curTop);
-            }
-        });
+        // var s = skrollr.init({
+        //     documentElement : "lineaTiempo",
+        //     render: function(data) {
+        //         //Debugging - Log the current scroll position.
+        //         // console.log(data.curTop);
+        //     }
+        // });
+
+        var altoPiso = 350;
+
+        $("#lineaTiempo").scroll(function(e) {
+            var $lt = $(this),
+                top = $lt.scrollTop();
+            // console.log(top);
+            $lt.find(".piso").each(function(index) {
+                var $piso = $(this),
+                    topModif = (top-(index*350))/7;
+                if((351*(index+1)>top+900) || (top>(index+1)*350)) {
+                // if((351*(index+1)>top+900)) {
+                    $piso.css({ "background-position": "0 0px" });
+                    return;
+                }
+                // if(index==0) console.log("<<<<<<<<<<<<<<<<",index);
+                // console.log(index);
+                // if(index==4)
+                //     console.log(">>>>>>>>>", index, top, topModif);
+                // if(topModif<0) topModif *= -1;
+                // topModif = -topModif
+                if(topModif<-68) return;
+                $piso.css({ "background-position": "0 "+ topModif + "px" });
+            });
+        })
     }
 };
 
