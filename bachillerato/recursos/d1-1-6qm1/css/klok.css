@@ -47,6 +47,7 @@ body{height:100% !important;}
     color: white;
     height: 350px;
     padding: 190px 40px 20px 60px;
+    position: absolute;
 }
 
 .piso:nth-child(2n+2) .texto {
@@ -121,9 +122,10 @@ body{height:100% !important;}
 
 .boton-siguiente {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     right: 20px;
     cursor: pointer;
+    display: none;
 }
 .boton-siguiente img {
     cursor: pointer;
@@ -157,9 +159,9 @@ body{height:100% !important;}
 .moviles {
     width: 140px;
     position: absolute;
-    top: 10px;
+    top: 60px;
     left: 10px;
-    height: 542px;
+    height: 442px;
 }
 
 .moviles img {
@@ -181,7 +183,7 @@ body{height:100% !important;}
 .fijos {
     width: 340px;
     position: absolute;
-    top: 10px;
+    top: 60px;
     right: 10px;
 }
 
@@ -192,7 +194,7 @@ body{height:100% !important;}
 .droppables {
     position: absolute;
     width: 140px;
-    top: 10px;
+    top: 60px;
     left: 300px;
 }
 

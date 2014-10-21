@@ -8,6 +8,9 @@ var NOMBREAPP = {
 
         var sonidoError = document.getElementById('sonido-error');
 
+        var totalArrastrables = 8,
+            arrastrablesEnArray = totalArrastrables - 1;
+
         $("#panelReel").swipe("disable");
 
         $(".secc1 .boton-siguiente").click(function() {
@@ -26,7 +29,7 @@ var NOMBREAPP = {
 
         $(".draggable").shuffle();
 
-        $(".draggable:gt(9)").hide().addClass("not-today");
+        $(".draggable:gt("+arrastrablesEnArray+")").hide().addClass("not-today");
 
         $(".draggable.not-today").each(function() {
             var that = $(this),
@@ -35,7 +38,7 @@ var NOMBREAPP = {
             $(".fijos img[data-correcto='"+d+"']").hide();
         });
 
-        $(".draggable:lt(10)").draggable({
+        $(".draggable:lt("+totalArrastrables+")").draggable({
             revert: "invalid"
         });
 
@@ -68,30 +71,42 @@ var NOMBREAPP = {
         //     }
         // });
 
-        var altoPiso = 350;
+        // var altoPiso = 350;
 
-        $("#lineaTiempo").scroll(function(e) {
-            var $lt = $(this),
-                top = $lt.scrollTop();
-            // console.log(top);
-            $lt.find(".piso").each(function(index) {
-                var $piso = $(this),
-                    topModif = (top-(index*350))/7;
-                if((351*(index+1)>top+900) || (top>(index+1)*350)) {
-                // if((351*(index+1)>top+900)) {
-                    $piso.css({ "background-position": "0 0px" });
-                    return;
+        // $("#lineaTiempo").scroll(function(e) {
+        //     var $lt = $(this),
+        //         top = $lt.scrollTop();
+        //     // console.log(top);
+        //     $lt.find(".piso").each(function(index) {
+        //         var $piso = $(this),
+        //             topModif = (top-(index*350))/7;
+        //         if((351*(index+1)>top+900) || (top>(index+1)*350)) {
+        //         // if((351*(index+1)>top+900)) {
+        //             $piso.css({ "background-position": "0 0px" });
+        //             return;
+        //         }
+        //         // if(index==0) console.log("<<<<<<<<<<<<<<<<",index);
+        //         // console.log(index);
+        //         // if(index==4)
+        //         //     console.log(">>>>>>>>>", index, top, topModif);
+        //         // if(topModif<0) topModif *= -1;
+        //         // topModif = -topModif
+        //         if(topModif<-68) return;
+        //         $piso.css({ "background-position": "0 "+ topModif + "px" });
+        //     });
+        // })
+
+        $(window).load(function(){
+            var $fr = $($('#myIframe').contents()),
+                frameHeight = $fr.height();
+            $fr.scroll(function(){
+                if(frameHeight - $fr.scrollTop() < 900) {
+                    $(".boton-siguiente").fadeIn();
+                } else {
+                    $(".boton-siguiente").fadeOut();
                 }
-                // if(index==0) console.log("<<<<<<<<<<<<<<<<",index);
-                // console.log(index);
-                // if(index==4)
-                //     console.log(">>>>>>>>>", index, top, topModif);
-                // if(topModif<0) topModif *= -1;
-                // topModif = -topModif
-                if(topModif<-68) return;
-                $piso.css({ "background-position": "0 "+ topModif + "px" });
             });
-        })
+        });
     }
 };
 

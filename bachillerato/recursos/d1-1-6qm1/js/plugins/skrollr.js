@@ -223,13 +223,13 @@
 	 * Constructor.
 	 */
 	function Skrollr(options) {
-		// documentElement = document.documentElement;
-		if(options.documentElement){
-	        documentElement = document.getElementById(options.documentElement);
-	                    //////  Incase you want a container wrapper
-	    }else{
-	        documentElement = document.documentElement;
-	    }
+		documentElement = document.documentElement;
+		// if(options.documentElement){
+	 //        documentElement = document.getElementById(options.documentElement);
+	 //                    //////  Incase you want a container wrapper
+	 //    }else{
+	 //        documentElement = document.documentElement;
+	 //    }
 		body = document.body;
 
 		detectCSSPrefix();
